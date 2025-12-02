@@ -30,9 +30,9 @@ export default function BackgroundEffects() {
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    // Create particles
+    // Create particles - reduced count and subtlety
     const particles: Particle[] = []
-    const particleCount = 80
+    const particleCount = 40 // Reduced from 80
 
     const colors = [
       'rgba(59, 130, 246, ', // Blue
@@ -44,10 +44,10 @@ export default function BackgroundEffects() {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 0.5,
-        opacity: Math.random() * 0.5 + 0.2,
+        vx: (Math.random() - 0.5) * 0.3, // Slower movement
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 1.5 + 0.3, // Smaller particles
+        opacity: Math.random() * 0.3 + 0.1, // More subtle
         color: colors[Math.floor(Math.random() * colors.length)],
       })
     }
@@ -97,17 +97,17 @@ export default function BackgroundEffects() {
         ctx.fill()
       })
 
-      // Draw connection lines between nearby particles
+      // Draw connection lines - more subtle and fewer connections
       particles.forEach((p1, i) => {
         particles.slice(i + 1).forEach((p2) => {
           const dx = p1.x - p2.x
           const dy = p1.y - p2.y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 120) {
+          if (distance < 100) { // Reduced connection distance
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 120)})`
-            ctx.lineWidth = 0.5
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.05 * (1 - distance / 100)})` // More subtle
+            ctx.lineWidth = 0.3
             ctx.moveTo(p1.x, p1.y)
             ctx.lineTo(p2.x, p2.y)
             ctx.stroke()
@@ -129,7 +129,7 @@ export default function BackgroundEffects() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-[1] opacity-60"
+      className="fixed inset-0 pointer-events-none z-[1] opacity-40"
       style={{ mixBlendMode: 'screen' }}
     />
   )

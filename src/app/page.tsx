@@ -104,7 +104,7 @@ export default function Homepage() {
       </section>
 
       {/* Apparel Section */}
-      <section className="section-padding content-section bg-card/30 relative overflow-hidden scan-effect">
+      <section className="section-padding content-section bg-card/30 relative overflow-hidden">
         {/* Mystical orb effects */}
         <div className="mystical-orb orb-gold" style={{ width: '450px', height: '450px', top: '10%', right: '5%', animationDelay: '1s' }} />
         <div className="mystical-orb orb-blue" style={{ width: '300px', height: '300px', bottom: '10%', left: '5%', animationDelay: '3s' }} />
