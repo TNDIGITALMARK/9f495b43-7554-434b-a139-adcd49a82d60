@@ -13,7 +13,7 @@ COLOR PALETTE (EXACT VALUES):
 - Gold Accent: #d4af37 (HSL: 43, 69%, 53%) - Logo, highlights
 - Bright Blue CTA: #3b82f6 (HSL: 217, 91%, 60%) - Buttons, links
 - White Text: #ffffff
-- Muted Text: rgba(255, 255, 255, 0.7)
+- All Text: Pure white #ffffff
 
 TYPOGRAPHY SYSTEM:
 - Primary Serif: 'Cinzel' - Literary headings, logo
@@ -58,7 +58,7 @@ VISUAL EFFECTS:
 
   /* Muted Colors */
   --muted: 265 30% 25%;
-  --muted-foreground: 0 0% 70%; /* rgba(255, 255, 255, 0.7) */
+  --muted-foreground: 0 0% 100%; /* Pure white */
 
   /* Accent: Bright Blue */
   --accent: 217 91% 60%; /* #3b82f6 */
@@ -106,7 +106,7 @@ VISUAL EFFECTS:
   --secondary: 217 91% 60%;
   --secondary-foreground: 0 0% 100%;
   --muted: 265 30% 25%;
-  --muted-foreground: 0 0% 70%;
+  --muted-foreground: 0 0% 100%;
   --accent: 217 91% 60%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 70% 50%;
@@ -246,7 +246,7 @@ h4 {
 p {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--foreground));
 }
 
 /* Button styles matching design */
@@ -473,7 +473,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--foreground));
 }
 
 /* Content Layout Helpers */
@@ -519,7 +519,7 @@ textarea::placeholder {
 }
 
 .section-subtitle {
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--foreground));
   font-size: 1.125rem;
 }
 
