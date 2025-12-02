@@ -22,7 +22,7 @@ export default function Homepage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 tracking-tight text-balance hero-text-shadow">
               3 TIME PUBLISHED AUTHOR
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-10 font-light text-balance hero-text-shadow">
+            <p className="text-xl md:text-2xl lg:text-3xl text-white mb-10 font-light text-balance hero-text-shadow">
               Fantastical Worlds Await
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
