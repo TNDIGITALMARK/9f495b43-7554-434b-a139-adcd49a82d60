@@ -19,23 +19,26 @@ export default function Homepage() {
 
         <div className="container text-center content-section relative z-30">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 tracking-tight text-balance hero-text-shadow relative">
-              <span className="relative inline-block">
-                3 TIME PUBLISHED AUTHOR
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 tracking-tight text-balance hero-text-shadow relative">
+              <span className="relative inline-block text-gold">
+                LENNY STENGAL
               </span>
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-white mb-10 font-light text-balance hero-text-shadow">
-              Fantastical Worlds Await
+            <p className="text-2xl md:text-3xl lg:text-4xl mb-4 font-light text-balance hero-text-shadow text-parchment italic font-serif">
+              Three-Time Published Author
+            </p>
+            <p className="text-lg md:text-xl lg:text-2xl text-parchment/90 mb-10 text-balance hero-text-shadow">
+              Where Ancient Tales Meet Modern Craft
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/books">
-                <button className="btn-primary text-lg px-8 py-4">
-                  Explore Books
+                <button className="btn-primary text-base px-10 py-4">
+                  Explore Tomes
                 </button>
               </Link>
-              <Link href="/about">
-                <button className="px-8 py-4 rounded-full font-medium text-white border border-white/20 hover:border-gold hover:text-gold transition-all">
-                  Learn More
+              <Link href="/apparel">
+                <button className="px-10 py-4 rounded-md font-semibold text-parchment border-2 border-primary/40 hover:border-primary hover:bg-primary/10 transition-all backdrop-blur-sm bg-leather-brown/30">
+                  Shop Apparel
                 </button>
               </Link>
             </div>
@@ -45,17 +48,17 @@ export default function Homepage() {
 
       {/* Book Collection Section */}
       <section className="section-padding content-section relative overflow-hidden">
-        {/* Mystical orb effects */}
-        <div className="mystical-orb orb-blue" style={{ width: '400px', height: '400px', top: '-10%', left: '10%', animationDelay: '0s' }} />
-        <div className="mystical-orb orb-purple" style={{ width: '350px', height: '350px', bottom: '-5%', right: '15%', animationDelay: '2s' }} />
+        {/* Mystical orb effects - candlelight ambiance */}
+        <div className="mystical-orb orb-gold" style={{ width: '450px', height: '450px', top: '-10%', left: '8%', animationDelay: '0s' }} />
+        <div className="mystical-orb orb-burgundy" style={{ width: '380px', height: '380px', bottom: '-5%', right: '12%', animationDelay: '2s' }} />
 
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title font-serif text-white">
-              Discover New Realms
+            <h2 className="section-title font-serif">
+              Literary Collection
             </h2>
             <p className="section-subtitle text-pretty">
-              Immerse yourself in epic fantasy adventures
+              Tales of wonder, mystery, and adventure bound in timeless volumes
             </p>
           </div>
 
@@ -68,25 +71,25 @@ export default function Homepage() {
             ].map((book, idx) => (
               <div key={idx} className="card-enhanced group relative">
                 {book.badge && (
-                  <div className="absolute top-3 right-3 bg-accent text-white text-xs px-3 py-1.5 rounded-full z-10 font-medium shadow-lg">
+                  <div className="absolute top-3 right-3 bg-secondary text-parchment text-xs px-3 py-1.5 rounded z-10 font-semibold shadow-burgundy uppercase tracking-wide">
                     {book.badge}
                   </div>
                 )}
-                <div className="aspect-portrait relative bg-muted">
+                <div className="aspect-portrait relative bg-warm-black border-b border-primary/20">
                   <Image
                     src={book.image}
                     alt={book.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                   />
                 </div>
-                <div className="p-5 space-y-2">
-                  <h3 className="font-semibold text-white text-base lg:text-lg line-clamp-2">
+                <div className="p-5 space-y-3 relative z-10">
+                  <h3 className="font-serif font-bold text-parchment text-base lg:text-lg line-clamp-2">
                     {book.title}
                   </h3>
-                  <p className="text-gold font-bold text-lg">{book.price}</p>
-                  <button className="w-full mt-3 px-4 py-2 rounded-full bg-accent/10 text-accent border border-accent/30 hover:bg-accent hover:text-white transition-all text-sm font-medium">
-                    View Details
+                  <p className="text-gold font-bold text-xl tracking-wide">{book.price}</p>
+                  <button className="w-full mt-3 px-4 py-2.5 rounded bg-burgundy/20 text-primary border border-primary/40 hover:bg-primary hover:text-warm-black transition-all text-sm font-semibold uppercase tracking-wider shadow-gold">
+                    View Tome
                   </button>
                 </div>
               </div>
@@ -95,8 +98,8 @@ export default function Homepage() {
 
           <div className="text-center">
             <Link href="/books">
-              <button className="btn-primary text-lg px-8 py-4">
-                View All Books
+              <button className="btn-primary text-base px-10 py-4">
+                Browse Library
               </button>
             </Link>
           </div>
@@ -104,18 +107,18 @@ export default function Homepage() {
       </section>
 
       {/* Apparel Section */}
-      <section className="section-padding content-section bg-card/30 relative overflow-hidden">
+      <section className="section-padding content-section bg-card/40 relative overflow-hidden border-y border-primary/10">
         {/* Mystical orb effects */}
-        <div className="mystical-orb orb-gold" style={{ width: '450px', height: '450px', top: '10%', right: '5%', animationDelay: '1s' }} />
-        <div className="mystical-orb orb-blue" style={{ width: '300px', height: '300px', bottom: '10%', left: '5%', animationDelay: '3s' }} />
+        <div className="mystical-orb orb-burgundy" style={{ width: '480px', height: '480px', top: '5%', right: '3%', animationDelay: '1s' }} />
+        <div className="mystical-orb orb-purple" style={{ width: '350px', height: '350px', bottom: '8%', left: '4%', animationDelay: '3s' }} />
 
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title font-serif text-white">
-              Trendy Apparel
+            <h2 className="section-title font-serif">
+              Enchanted Wardrobe
             </h2>
             <p className="section-subtitle text-pretty">
-              Wear the stories you love
+              Garments woven with tales and artistry
             </p>
           </div>
 
@@ -126,26 +129,26 @@ export default function Homepage() {
               { title: 'Author Collection Tee', design: 'Lenny Stengel signature design', price: '$24.99', color: 'Charcoal' }
             ].map((item, idx) => (
               <div key={idx} className="card-enhanced group">
-                <div className="aspect-square relative bg-muted/50 backdrop-blur-sm flex items-center justify-center border border-white/5">
-                  <Shirt className="w-32 h-32 text-muted-foreground/40 transition-all duration-500 group-hover:scale-110 group-hover:text-gold/50" />
+                <div className="aspect-square relative bg-warm-black/60 backdrop-blur-sm flex items-center justify-center border border-primary/10 group-hover:border-primary/30 transition-all">
+                  <Shirt className="w-36 h-36 text-primary/30 transition-all duration-500 group-hover:scale-110 group-hover:text-primary/60 group-hover:drop-shadow-[0_0_20px_rgba(201,169,97,0.4)]" />
                 </div>
-                <div className="p-6 space-y-4">
+                <div className="p-6 space-y-4 relative z-10">
                   <div>
-                    <h3 className="font-semibold text-white text-lg lg:text-xl mb-2 line-clamp-1">
+                    <h3 className="font-serif font-bold text-parchment text-lg lg:text-xl mb-3 line-clamp-1">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 italic">
                       {item.design}
                     </p>
                   </div>
-                  <div className="flex items-center justify-between pt-2 border-t border-white/10">
-                    <span className="text-gold font-bold text-xl">{item.price}</span>
-                    <span className="text-sm text-muted-foreground bg-muted/30 px-3 py-1 rounded-full">
+                  <div className="flex items-center justify-between pt-3 border-t border-primary/20">
+                    <span className="text-gold font-bold text-2xl tracking-wide">{item.price}</span>
+                    <span className="text-xs text-parchment/80 bg-burgundy/20 px-3 py-1.5 rounded border border-burgundy/30 uppercase tracking-wider font-semibold">
                       {item.color}
                     </span>
                   </div>
-                  <button className="w-full px-4 py-2.5 rounded-full bg-gold/10 text-gold border border-gold/30 hover:bg-gold hover:text-background transition-all font-medium">
-                    Add to Cart
+                  <button className="w-full px-4 py-3 rounded bg-primary/15 text-primary border border-primary/40 hover:bg-primary hover:text-warm-black transition-all font-semibold uppercase tracking-wider text-sm shadow-gold">
+                    Add to Collection
                   </button>
                 </div>
               </div>
@@ -154,8 +157,8 @@ export default function Homepage() {
 
           <div className="text-center">
             <Link href="/apparel">
-              <button className="btn-primary text-lg px-8 py-4">
-                Shop All Apparel
+              <button className="btn-primary text-base px-10 py-4">
+                Explore Wardrobe
               </button>
             </Link>
           </div>
@@ -165,13 +168,13 @@ export default function Homepage() {
       {/* About Lenny Stengal Section */}
       <section className="section-padding content-section relative overflow-hidden">
         {/* Mystical orb effects */}
-        <div className="mystical-orb orb-purple" style={{ width: '500px', height: '500px', top: '20%', left: '-10%', animationDelay: '0.5s' }} />
-        <div className="mystical-orb orb-gold" style={{ width: '380px', height: '380px', bottom: '15%', right: '-5%', animationDelay: '2.5s' }} />
+        <div className="mystical-orb orb-gold" style={{ width: '520px', height: '520px', top: '15%', left: '-8%', animationDelay: '0.5s' }} />
+        <div className="mystical-orb orb-burgundy" style={{ width: '400px', height: '400px', bottom: '10%', right: '-3%', animationDelay: '2.5s' }} />
 
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title font-serif text-white">
-              About Lenny Stengal
+            <h2 className="section-title font-serif">
+              The Chronicler
             </h2>
           </div>
 
@@ -179,37 +182,38 @@ export default function Homepage() {
             <div className="grid md:grid-cols-5 gap-10 lg:gap-16 items-center">
               <div className="md:col-span-2 flex justify-center">
                 <div className="relative">
-                  <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-gold bg-gradient-to-br from-gold/20 to-accent/20 flex items-center justify-center border-4 border-gold/30">
-                    <BookOpen className="w-32 h-32 lg:w-40 lg:h-40 text-gold" />
+                  <div className="w-64 h-64 lg:w-80 lg:h-80 rounded overflow-hidden shadow-gold bg-gradient-to-br from-primary/20 via-burgundy/15 to-warm-black flex items-center justify-center border-2 border-primary/40 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50"></div>
+                    <BookOpen className="w-32 h-32 lg:w-40 lg:h-40 text-primary relative z-10 drop-shadow-[0_0_20px_rgba(201,169,97,0.6)]" />
                   </div>
-                  <div className="absolute -bottom-4 -right-4 bg-accent text-white px-6 py-3 rounded-full shadow-glow font-semibold">
+                  <div className="absolute -bottom-4 -right-4 bg-secondary text-parchment px-6 py-3 rounded shadow-burgundy font-bold uppercase tracking-wider text-sm border border-primary/30">
                     3x Published
                   </div>
                 </div>
               </div>
               <div className="md:col-span-3 text-center md:text-left space-y-6">
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <p className="text-muted-foreground text-lg leading-relaxed text-pretty">
-                    Lenny Stengal is an award-winning fantasy author known for imaginative
-                    world-building and compelling character arcs. With three published novels
-                    and a loyal following, Lenny&apos;s work explores themes of identity, courage,
-                    and the eternal struggle between light and darkness.
+                    <span className="text-primary font-serif font-bold text-xl">Lenny Stengal</span> is a celebrated storyteller
+                    whose tales weave through realms of mystery, adventure, and ancient lore. With three published works
+                    and a devoted readership, each narrative explores the depths of character, the weight of choice,
+                    and the timeless dance between shadow and light.
                   </p>
                   <p className="text-muted-foreground text-lg leading-relaxed text-pretty">
-                    Beyond writing, Lenny channels creative vision into unique apparel designs
-                    that bring fantastical worlds to life. Each piece tells a story, connecting
-                    readers with the magic they love.
+                    Beyond the written word, Lenny&apos;s creative essence flows into distinctive garments—each piece
+                    a wearable fragment of the worlds imagined. These designs bridge the gap between literature and craft,
+                    allowing enthusiasts to carry the magic with them.
                   </p>
                 </div>
                 <div className="pt-4 flex flex-col sm:flex-row gap-4">
                   <Link href="/about">
                     <button className="btn-primary px-8 py-3">
-                      Full Biography
+                      Discover More
                     </button>
                   </Link>
                   <Link href="/books">
-                    <button className="px-8 py-3 rounded-full font-medium text-gold border border-gold/30 hover:bg-gold/10 transition-all">
-                      View Books
+                    <button className="px-8 py-3 rounded-md font-semibold text-primary border-2 border-primary/40 hover:bg-primary/10 hover:border-primary transition-all backdrop-blur-sm">
+                      View Collected Works
                     </button>
                   </Link>
                 </div>
@@ -220,36 +224,36 @@ export default function Homepage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="section-padding content-section bg-gradient-to-b from-card/30 to-card/60 backdrop-blur-sm relative overflow-hidden">
+      <section className="section-padding content-section bg-gradient-to-b from-card/40 to-card/70 backdrop-blur-sm relative overflow-hidden border-t border-primary/10">
         {/* Mystical orb effects */}
-        <div className="mystical-orb orb-blue" style={{ width: '420px', height: '420px', top: '30%', left: '50%', transform: 'translateX(-50%)', animationDelay: '1.5s' }} />
+        <div className="mystical-orb orb-gold" style={{ width: '460px', height: '460px', top: '25%', left: '50%', transform: 'translateX(-50%)', animationDelay: '1.5s' }} />
 
         <div className="container">
           <div className="content-center">
             <div className="text-center space-y-6">
-              <div className="inline-block p-4 rounded-full bg-gold/10 mb-4">
-                <BookOpen className="w-12 h-12 text-gold" />
+              <div className="inline-block p-5 rounded bg-primary/10 mb-4 border border-primary/30 shadow-gold">
+                <BookOpen className="w-14 h-14 text-primary drop-shadow-[0_0_15px_rgba(201,169,97,0.5)]" />
               </div>
-              <h2 className="section-title font-serif text-white">
-                Join the Newsletter
+              <h2 className="section-title font-serif">
+                The Reader&apos;s Circle
               </h2>
               <p className="section-subtitle text-pretty max-w-xl mx-auto">
-                Stay updated on new releases, exclusive content, and special offers.
-                Be the first to know when new books and apparel drop.
+                Join our fellowship to receive word of new tales, exclusive glimpses into upcoming works,
+                and announcements of rare garments and limited editions.
               </p>
               <form className="max-w-lg mx-auto pt-4">
                 <div className="flex flex-col sm:flex-row gap-4">
                   <input
                     type="email"
-                    placeholder="Enter your email address"
-                    className="flex-1 px-6 py-4 rounded-full bg-background/50 border border-border text-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all backdrop-blur-sm"
+                    placeholder="Your correspondence address..."
+                    className="flex-1 px-6 py-4 bg-warm-black/60 border border-primary/30 text-parchment placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all backdrop-blur-sm rounded"
                   />
                   <button type="submit" className="btn-primary whitespace-nowrap px-8 py-4 text-base">
-                    Subscribe
+                    Join Circle
                   </button>
                 </div>
-                <p className="text-xs text-muted-foreground mt-4">
-                  We respect your privacy. Unsubscribe at any time.
+                <p className="text-xs text-muted-foreground mt-5 italic">
+                  Your trust is sacred. Depart the circle at your leisure.
                 </p>
               </form>
             </div>
