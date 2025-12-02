@@ -19,8 +19,10 @@ export default function Homepage() {
 
         <div className="container text-center content-section relative z-30">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 tracking-tight text-balance hero-text-shadow">
-              3 TIME PUBLISHED AUTHOR
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 tracking-tight text-balance hero-text-shadow relative">
+              <span className="relative inline-block">
+                3 TIME PUBLISHED AUTHOR
+              </span>
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-white mb-10 font-light text-balance hero-text-shadow">
               Fantastical Worlds Await
@@ -42,7 +44,11 @@ export default function Homepage() {
       </section>
 
       {/* Book Collection Section */}
-      <section className="section-padding content-section">
+      <section className="section-padding content-section relative overflow-hidden">
+        {/* Mystical orb effects */}
+        <div className="mystical-orb orb-blue" style={{ width: '400px', height: '400px', top: '-10%', left: '10%', animationDelay: '0s' }} />
+        <div className="mystical-orb orb-purple" style={{ width: '350px', height: '350px', bottom: '-5%', right: '15%', animationDelay: '2s' }} />
+
         <div className="container">
           <div className="section-header">
             <h2 className="section-title font-serif text-white">
@@ -98,7 +104,11 @@ export default function Homepage() {
       </section>
 
       {/* Apparel Section */}
-      <section className="section-padding content-section bg-card/30">
+      <section className="section-padding content-section bg-card/30 relative overflow-hidden scan-effect">
+        {/* Mystical orb effects */}
+        <div className="mystical-orb orb-gold" style={{ width: '450px', height: '450px', top: '10%', right: '5%', animationDelay: '1s' }} />
+        <div className="mystical-orb orb-blue" style={{ width: '300px', height: '300px', bottom: '10%', left: '5%', animationDelay: '3s' }} />
+
         <div className="container">
           <div className="section-header">
             <h2 className="section-title font-serif text-white">
@@ -153,7 +163,11 @@ export default function Homepage() {
       </section>
 
       {/* About Lenny Stengal Section */}
-      <section className="section-padding content-section">
+      <section className="section-padding content-section relative overflow-hidden">
+        {/* Mystical orb effects */}
+        <div className="mystical-orb orb-purple" style={{ width: '500px', height: '500px', top: '20%', left: '-10%', animationDelay: '0.5s' }} />
+        <div className="mystical-orb orb-gold" style={{ width: '380px', height: '380px', bottom: '15%', right: '-5%', animationDelay: '2.5s' }} />
+
         <div className="container">
           <div className="section-header">
             <h2 className="section-title font-serif text-white">
@@ -206,7 +220,10 @@ export default function Homepage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="section-padding content-section bg-gradient-to-b from-card/30 to-card/60 backdrop-blur-sm">
+      <section className="section-padding content-section bg-gradient-to-b from-card/30 to-card/60 backdrop-blur-sm relative overflow-hidden">
+        {/* Mystical orb effects */}
+        <div className="mystical-orb orb-blue" style={{ width: '420px', height: '420px', top: '30%', left: '50%', transform: 'translateX(-50%)', animationDelay: '1.5s' }} />
+
         <div className="container">
           <div className="content-center">
             <div className="text-center space-y-6">
