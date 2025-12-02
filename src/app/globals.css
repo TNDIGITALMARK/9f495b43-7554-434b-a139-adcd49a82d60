@@ -585,3 +585,41 @@ img {
     background-position: -200% 0;
   }
 }
+
+/* Hero Slideshow Animations */
+@keyframes slideshow-fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes magical-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-magical-float {
+  animation: magical-float 3s ease-in-out infinite;
+}
+
+/* Enhanced hero section with slideshow */
+.hero-slideshow-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Improved text shadows for better readability on slideshow backgrounds */
+.hero-text-shadow {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5),
+               0 4px 40px rgba(0, 0, 0, 0.3);
+}

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { BookOpen, Shirt } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import HeroSlideshow from '@/components/HeroSlideshow'
 
 export default function Homepage() {
   return (
@@ -12,13 +13,16 @@ export default function Homepage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative section-padding-lg overflow-hidden">
-        <div className="container text-center content-section">
+      <section className="relative section-padding-lg overflow-hidden min-h-[80vh] flex items-center">
+        {/* Background Slideshow */}
+        <HeroSlideshow />
+
+        <div className="container text-center content-section relative z-30">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 tracking-tight text-balance">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 tracking-tight text-balance hero-text-shadow">
               3 TIME PUBLISHED AUTHOR
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-10 font-light text-balance">
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-10 font-light text-balance hero-text-shadow">
               Fantastical Worlds Await
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
