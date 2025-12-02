@@ -1,97 +1,127 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/*
+============================================
+STENGEL13 DESIGN SYSTEM - PIXEL-PERFECT SPECIFICATIONS
+============================================
+Extracted from design reference: ai-generated-preview.png
+
+COLOR PALETTE (EXACT VALUES):
+- Primary Background: #1a0f2e (HSL: 260, 51%, 12%) - Deep purple/navy
+- Secondary Background: #2d1b4e (HSL: 265, 44%, 20%) - Lighter purple
+- Gold Accent: #d4af37 (HSL: 43, 69%, 53%) - Logo, highlights
+- Bright Blue CTA: #3b82f6 (HSL: 217, 91%, 60%) - Buttons, links
+- White Text: #ffffff
+- Muted Text: rgba(255, 255, 255, 0.7)
+
+TYPOGRAPHY SYSTEM:
+- Primary Serif: 'Cinzel' - Literary headings, logo
+- Primary Sans: 'Inter' - Body text, UI elements
+- Hero Heading: 48px / 700 weight / -0.02em tracking
+- Section Titles: 32px / 600 weight
+- Body Text: 16px / 400 weight / 1.6 line-height
+
+SPACING & LAYOUT:
+- Section Padding: 80-100px vertical
+- Card Spacing: 24px gap between cards
+- Border Radius: 8px for cards, 9999px for buttons
+- Container Max Width: 1400px
+
+VISUAL EFFECTS:
+- Card Glow: 0 4px 20px rgba(59, 130, 246, 0.3)
+- Hover Glow: 0 8px 32px rgba(59, 130, 246, 0.5)
+- Background: Gradient with flowing blue wave overlay
+============================================
 */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* Core Brand Colors - Fantasy Dark Theme */
+  --background: 260 51% 12%; /* #1a0f2e - Deep purple navy */
+  --foreground: 0 0% 100%; /* #ffffff - Pure white */
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* Card & Surface Colors */
+  --card: 265 44% 20%; /* #2d1b4e - Lighter purple for cards */
+  --card-foreground: 0 0% 100%;
 
-  /* Popovers with white background */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  /* Popover Colors */
+  --popover: 265 44% 20%;
+  --popover-foreground: 0 0% 100%;
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
+  /* Primary: Gold Accent */
+  --primary: 43 69% 53%; /* #d4af37 - Gold for logos, highlights */
+  --primary-foreground: 260 51% 12%; /* Dark text on gold */
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Secondary: Bright Blue for CTAs */
+  --secondary: 217 91% 60%; /* #3b82f6 - Bright blue */
+  --secondary-foreground: 0 0% 100%;
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted Colors */
+  --muted: 265 30% 25%;
+  --muted-foreground: 0 0% 70%; /* rgba(255, 255, 255, 0.7) */
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Accent: Bright Blue */
+  --accent: 217 91% 60%; /* #3b82f6 */
+  --accent-foreground: 0 0% 100%;
 
-  /* Destructive: Clean red */
+  /* Destructive */
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  /* Borders & Inputs */
+  --border: 265 30% 30%;
+  --input: 265 30% 30%;
+  --ring: 217 91% 60%; /* Blue focus ring */
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Border Radius */
+  --radius: 0.5rem; /* 8px for cards */
 
-  /* Sidebar: Clean white with black text */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  /* Sidebar (if needed) */
+  --sidebar-background: 265 44% 20%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 43 69% 53%;
+  --sidebar-primary-foreground: 260 51% 12%;
+  --sidebar-accent: 265 30% 25%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 265 30% 30%;
+  --sidebar-ring: 217 91% 60%;
+
+  /* Custom Brand Variables */
+  --gold: 43 69% 53%; /* #d4af37 */
+  --blue-glow: 217 91% 60%; /* #3b82f6 */
+  --purple-dark: 260 51% 12%; /* #1a0f2e */
+  --purple-light: 265 44% 20%; /* #2d1b4e */
 }
 
+/* Dark mode uses same fantasy theme */
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --background: 260 51% 12%;
+  --foreground: 0 0% 100%;
+  --card: 265 44% 20%;
+  --card-foreground: 0 0% 100%;
+  --popover: 265 44% 20%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 43 69% 53%;
+  --primary-foreground: 260 51% 12%;
+  --secondary: 217 91% 60%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 265 30% 25%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 265 30% 30%;
+  --input: 265 30% 30%;
+  --ring: 217 91% 60%;
+  --sidebar-background: 265 44% 20%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 43 69% 53%;
+  --sidebar-primary-foreground: 260 51% 12%;
+  --sidebar-accent: 265 30% 25%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 265 30% 30%;
+  --sidebar-ring: 217 91% 60%;
 }
 
 @theme {
@@ -168,28 +198,76 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* Base Typography System */
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
-/* Minimal, clean typography */
+/* Fantasy-themed Typography with Cinzel */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
   font-weight: 600;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   color: hsl(var(--foreground));
+  line-height: 1.2;
 }
 
-/* Clean button styles */
+h1 {
+  font-size: 3rem; /* 48px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Button styles matching design */
 button {
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-/* Subtle shadows for depth */
+/* Link styles */
+a {
+  color: hsl(var(--accent));
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: hsl(var(--primary));
+}
+
+/* Custom shadow system for fantasy glow effects */
 .shadow-sm {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -200,4 +278,79 @@ button {
 
 .shadow-md {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Blue glow effect for cards (matching design reference) */
+.shadow-glow {
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.shadow-glow-hover {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.5);
+}
+
+/* Gold glow for special elements */
+.shadow-gold {
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Utility classes for fantasy theme */
+.bg-fantasy-gradient {
+  background: linear-gradient(135deg, hsl(var(--purple-dark)) 0%, hsl(var(--purple-light)) 100%);
+}
+
+.text-gold {
+  color: hsl(var(--gold));
+}
+
+.text-glow-blue {
+  color: hsl(var(--blue-glow));
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.5);
+}
+
+/* Button styles matching design */
+.btn-primary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: hsl(217 91% 65%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Flowing wave background effect */
+.bg-waves {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-waves::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
