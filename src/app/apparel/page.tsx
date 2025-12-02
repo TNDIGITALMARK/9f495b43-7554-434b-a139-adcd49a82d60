@@ -2,6 +2,7 @@ export const dynamic = 'force-dynamic'
 
 import Link from 'next/link'
 import { Shirt, ArrowLeft } from 'lucide-react'
+import Image from 'next/image'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
@@ -15,7 +16,8 @@ const apparelItems = [
     colors: ['Navy', 'Black', 'Charcoal'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     material: '80% Cotton, 20% Polyester',
-    features: ['Premium heavyweight fabric', 'Double-lined hood', 'Kangaroo pocket', 'Ribbed cuffs and waistband']
+    features: ['Premium heavyweight fabric', 'Double-lined hood', 'Kangaroo pocket', 'Ribbed cuffs and waistband'],
+    image: '/generated/dragon-mythology-hoodie.png'
   },
   {
     id: 2,
@@ -26,7 +28,8 @@ const apparelItems = [
     colors: ['Black', 'Navy', 'Deep Purple'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     material: '80% Cotton, 20% Polyester',
-    features: ['Glow-in-the-dark elements', 'Premium heavyweight fabric', 'Double-lined hood', 'Kangaroo pocket']
+    features: ['Glow-in-the-dark elements', 'Premium heavyweight fabric', 'Double-lined hood', 'Kangaroo pocket'],
+    image: '/generated/ethereal-glow-hoodie.png'
   },
   {
     id: 3,
@@ -37,7 +40,8 @@ const apparelItems = [
     colors: ['Charcoal', 'Navy', 'Forest Green', 'Black'],
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
     material: '100% Premium Cotton',
-    features: ['Soft-touch fabric', 'Breathable material', 'Reinforced neckline', 'Pre-shrunk']
+    features: ['Soft-touch fabric', 'Breathable material', 'Reinforced neckline', 'Pre-shrunk'],
+    image: '/generated/author-collection-tee.png'
   },
   {
     id: 4,
@@ -48,7 +52,8 @@ const apparelItems = [
     colors: ['Black', 'Burgundy', 'Navy'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     material: '85% Cotton, 15% Polyester',
-    features: ['Premium heavyweight fabric', 'Embroidered details', 'Double-lined hood', 'Kangaroo pocket']
+    features: ['Premium heavyweight fabric', 'Embroidered details', 'Double-lined hood', 'Kangaroo pocket'],
+    image: '/generated/eternal-oath-hoodie.png'
   },
   {
     id: 5,
@@ -59,7 +64,8 @@ const apparelItems = [
     colors: ['Black', 'Navy', 'Charcoal'],
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
     material: '100% Premium Cotton',
-    features: ['Metallic ink details', 'Soft-touch fabric', 'Reinforced neckline', 'Pre-shrunk']
+    features: ['Metallic ink details', 'Soft-touch fabric', 'Reinforced neckline', 'Pre-shrunk'],
+    image: '/generated/shadows-prophecy-tee.png'
   },
   {
     id: 6,
@@ -70,7 +76,8 @@ const apparelItems = [
     colors: ['Deep Purple', 'Silver Gray', 'Black'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     material: '80% Cotton, 20% Polyester',
-    features: ['Premium heavyweight fabric', 'Soft inner lining', 'Double-lined hood', 'Kangaroo pocket']
+    features: ['Premium heavyweight fabric', 'Soft inner lining', 'Double-lined hood', 'Kangaroo pocket'],
+    image: '/generated/aetheria-warrior-hoodie.png'
   }
 ]
 
@@ -102,9 +109,15 @@ export default function ApparelPage() {
             {apparelItems.map((item) => (
               <div key={item.id} className="bg-card rounded-2xl overflow-hidden shadow-glow">
                 {/* Product Image */}
-                <div className="aspect-square bg-muted flex items-center justify-center p-12 relative group">
-                  <Shirt className="w-48 h-48 text-muted-foreground/30 transition-transform group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="aspect-square bg-muted relative group overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Product Details */}
