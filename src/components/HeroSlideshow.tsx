@@ -27,9 +27,9 @@ export default function HeroSlideshow() {
   }, [])
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Background slideshow container */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         {SLIDESHOW_IMAGES.map((image, index) => (
           <div
             key={image}
@@ -52,7 +52,7 @@ export default function HeroSlideshow() {
       </div>
 
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background/90 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background/90 z-10 pointer-events-none" />
 
       {/* Magical particle overlay effect */}
       <div className="absolute inset-0 z-20 pointer-events-none">
@@ -60,7 +60,7 @@ export default function HeroSlideshow() {
       </div>
 
       {/* Slideshow indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2 pointer-events-auto">
         {SLIDESHOW_IMAGES.map((_, index) => (
           <button
             key={index}
