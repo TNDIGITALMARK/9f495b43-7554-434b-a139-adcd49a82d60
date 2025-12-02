@@ -51,8 +51,8 @@ export default function Navigation() {
                 href={item.href}
                 className={`px-4 lg:px-5 py-2.5 rounded font-semibold transition-all duration-300 uppercase tracking-wider text-sm border ${
                   isActive(item.href)
-                    ? 'text-warm-black bg-primary border-primary shadow-gold'
-                    : 'text-parchment hover:text-primary border-transparent hover:border-primary/40 hover:bg-primary/10'
+                    ? 'text-burgundy bg-primary border-primary shadow-gold'
+                    : 'text-parchment hover:text-burgundy border-transparent hover:border-primary/40 hover:bg-primary/10'
                 }`}
               >
                 {item.label}
@@ -95,8 +95,8 @@ export default function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-5 py-3.5 rounded font-semibold transition-all duration-300 uppercase tracking-wider text-sm border ${
                     isActive(item.href)
-                      ? 'bg-primary text-warm-black border-primary shadow-gold'
-                      : 'text-parchment hover:bg-primary/10 border-primary/30 hover:border-primary/50'
+                      ? 'bg-primary text-burgundy border-primary shadow-gold'
+                      : 'text-parchment hover:text-burgundy hover:bg-primary/10 border-primary/30 hover:border-primary/50'
                   }`}
                 >
                   {item.label}
