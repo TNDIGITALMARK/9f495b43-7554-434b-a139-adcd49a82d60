@@ -2,7 +2,7 @@ export const dynamic = 'force-dynamic'
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { BookOpen, Shirt } from 'lucide-react'
+import { BookOpen } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import HeroSlideshow from '@/components/HeroSlideshow'
@@ -124,13 +124,18 @@ export default function Homepage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-12">
             {[
-              { title: 'Dragon Mythology Hoodie', design: 'Golden dragon design with mystical patterns', price: '$39.99', color: 'Navy' },
-              { title: 'Ethereal Glow Hoodie', design: 'Glowing blue ethereal design', price: '$39.99', color: 'Black' },
-              { title: 'Author Collection Tee', design: 'Lenny Stengel signature design', price: '$24.99', color: 'Charcoal' }
+              { title: 'Dragon Mythology Hoodie', design: 'Golden dragon design with mystical patterns', price: '$39.99', color: 'Navy', image: '/generated/apparel-dragon-hoodie.png' },
+              { title: 'Ethereal Glow Hoodie', design: 'Glowing blue ethereal design', price: '$39.99', color: 'Black', image: '/generated/apparel-ethereal-hoodie.png' },
+              { title: 'Author Collection Tee', design: 'Lenny Stengel signature design', price: '$24.99', color: 'Charcoal', image: '/generated/apparel-author-tee.png' }
             ].map((item, idx) => (
               <div key={idx} className="card-enhanced group">
-                <div className="aspect-square relative bg-warm-black/60 backdrop-blur-sm flex items-center justify-center border border-primary/10 group-hover:border-primary/30 transition-all">
-                  <Shirt className="w-36 h-36 text-primary/30 transition-all duration-500 group-hover:scale-110 group-hover:text-primary/60 group-hover:drop-shadow-[0_0_20px_rgba(201,169,97,0.4)]" />
+                <div className="aspect-square relative bg-warm-black/60 backdrop-blur-sm border border-primary/10 group-hover:border-primary/30 transition-all overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-95 group-hover:opacity-100"
+                  />
                 </div>
                 <div className="p-6 space-y-4 relative z-10">
                   <div>
