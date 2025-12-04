@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { ShoppingCart, Menu, X, Box } from 'lucide-react'
+import { ShoppingCart, Menu, X } from 'lucide-react'
 import BoxxLogo from './BoxxLogo'
 
 export default function Navigation() {
@@ -30,15 +30,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Enhanced Logo */}
           <Link href="/" className="group flex items-center">
-            <div className="hidden lg:block">
-              <BoxxLogo size="sm" animated={false} />
-            </div>
-            <div className="lg:hidden flex items-center gap-2">
-              <Box className="w-8 h-8 text-pink group-hover:rotate-45 transition-transform" style={{ filter: 'drop-shadow(0 0 10px hsl(var(--electric-pink)))' }} />
-              <span className="text-pink font-bold text-2xl uppercase tracking-wider" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '2px 2px 0 hsl(var(--cyber-yellow)), 4px 4px 0 rgba(0,0,0,0.3)' }}>
-                BOXX
-              </span>
-            </div>
+            <BoxxLogo size="sm" animated={false} />
           </Link>
 
           {/* Desktop Navigation - Enhanced with crazy colorful theme */}
