@@ -55,19 +55,19 @@ export default function HeroSlideshow() {
         ))}
       </div>
 
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background/90 z-10 pointer-events-none" />
+      {/* Enhanced dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 z-10 pointer-events-none" />
 
-      {/* Slideshow indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2 pointer-events-auto">
+      {/* Slideshow indicators - positioned at bottom */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex gap-3 pointer-events-auto">
         {SLIDESHOW_IMAGES.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-300 ${
               currentIndex === index
-                ? 'w-8 bg-yellow'
-                : 'w-1.5 bg-white/30 hover:bg-white/50'
+                ? 'w-10 bg-yellow shadow-glow'
+                : 'w-2 bg-white/40 hover:bg-white/60'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

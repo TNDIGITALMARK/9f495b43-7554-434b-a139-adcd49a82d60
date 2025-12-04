@@ -13,44 +13,63 @@ export default function Homepage() {
     <div className="min-h-screen bg-waves">
       <Navigation />
 
-      {/* Hero Section - Simplified */}
-      <section className="relative section-padding-lg overflow-hidden min-h-[90vh] flex items-center">
+      {/* Hero Section - Modern & Clean */}
+      <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
         {/* Background Slideshow */}
         <HeroSlideshow />
 
-        <div className="container text-center content-section relative z-30">
-          <div className="max-w-6xl mx-auto space-y-8">
-            {/* Logo - Responsive */}
-            <div className="relative mb-6">
-              <div className="hidden lg:flex">
-                <BoxxLogo size="xl" animated={true} className="justify-center flex-wrap" />
+        {/* Content Container */}
+        <div className="container relative z-30 px-6 md:px-12">
+          <div className="max-w-5xl mx-auto">
+            {/* Logo - Clean & Centered */}
+            <div className="flex justify-center mb-8 md:mb-12">
+              <div className="hidden lg:block">
+                <BoxxLogo size="xl" animated={true} />
               </div>
-              <div className="hidden md:flex lg:hidden">
-                <BoxxLogo size="lg" animated={true} className="justify-center flex-wrap" />
+              <div className="hidden md:block lg:hidden">
+                <BoxxLogo size="lg" animated={true} />
               </div>
-              <div className="flex md:hidden">
-                <BoxxLogo size="md" animated={true} className="justify-center flex-wrap" />
+              <div className="block md:hidden">
+                <BoxxLogo size="md" animated={true} />
               </div>
             </div>
 
-            {/* Simplified Tagline */}
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-balance text-yellow px-4" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 4px 4px 0 rgba(0,0,0,0.4)' }}>
+            {/* Tagline - Bold & Impactful */}
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 md:mb-8 leading-tight"
+              style={{
+                fontFamily: 'Righteous, sans-serif',
+                color: 'hsl(var(--cyber-yellow))',
+                textShadow: '3px 3px 0 hsl(var(--neon-purple)), 6px 6px 0 rgba(0,0,0,0.5)'
+              }}
+            >
               WILD STREETWEAR • CRAZY COLORS • NO LIMITS
             </h1>
 
-            <p className="text-base md:text-lg lg:text-xl text-balance px-6" style={{ fontFamily: 'Fredoka, sans-serif', color: 'rgba(255, 255, 255, 0.95)', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+            {/* Subtitle - Clean & Readable */}
+            <p
+              className="text-lg sm:text-xl md:text-2xl text-center mb-10 md:mb-14 max-w-3xl mx-auto leading-relaxed"
+              style={{
+                fontFamily: 'Fredoka, sans-serif',
+                color: 'rgba(255, 255, 255, 0.95)',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.7)'
+              }}
+            >
               Explosive Fashion That Breaks All The Rules
             </p>
 
-            {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-4">
+            {/* CTA Buttons - Prominent & Balanced */}
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
               <Link href="/apparel">
-                <button className="btn-primary text-sm sm:text-base md:text-lg px-8 sm:px-12 md:px-14 py-4 sm:py-5 md:py-6 transform hover:scale-105 w-full sm:w-auto">
+                <button className="btn-primary text-base md:text-lg px-10 md:px-14 py-4 md:py-5 transform hover:scale-105 transition-all min-w-[280px] sm:min-w-0">
                   SHOP CRAZY CLOTHES
                 </button>
               </Link>
               <Link href="/books">
-                <button className="px-8 sm:px-12 md:px-14 py-4 sm:py-5 md:py-6 rounded-full font-bold text-white border-4 border-blue hover:border-yellow hover:bg-purple/30 transition-all backdrop-blur-sm bg-card/60 text-sm sm:text-base md:text-lg shadow-glow transform hover:scale-105 w-full sm:w-auto" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                <button
+                  className="px-10 md:px-14 py-4 md:py-5 rounded-full font-bold text-white border-4 border-blue hover:border-yellow hover:bg-purple/30 transition-all backdrop-blur-sm bg-card/60 text-base md:text-lg shadow-glow transform hover:scale-105 min-w-[280px] sm:min-w-0"
+                  style={{ fontFamily: 'Righteous, sans-serif' }}
+                >
                   MEET THE CREATOR
                 </button>
               </Link>
