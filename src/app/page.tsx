@@ -18,27 +18,40 @@ export default function Homepage() {
         <HeroSlideshow />
 
         <div className="container text-center content-section relative z-30">
-          <div className="max-w-4xl mx-auto space-y-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 tracking-tight text-balance hero-text-shadow relative">
-              <span className="relative inline-block text-gold">
-                LENNY STENGAL
+          <div className="max-w-5xl mx-auto space-y-8">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-wider text-balance hero-text-shadow relative" style={{ fontFamily: 'Bangers, sans-serif' }}>
+              <span className="relative inline-block text-pink">
+                INSIDE{' '}
+                <span className="relative inline-block text-yellow">
+                  &{' '}
+                  <span className="relative">
+                    <span className="text-purple">O</span>
+                    <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-orange text-4xl md:text-5xl lg:text-6xl font-black" style={{ zIndex: 10 }}>
+                      13
+                    </span>
+                  </span>
+                  UTSIDE
+                </span>
               </span>
+              <br />
+              <span className="text-blue">THE</span>{' '}
+              <span className="text-green">BOXX</span>
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl mb-4 font-light text-balance hero-text-shadow text-parchment italic font-serif">
-              Three-Time Published Author
+            <p className="text-2xl md:text-3xl lg:text-4xl mb-6 font-bold text-balance text-yellow" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '3px 3px 0 hsl(var(--neon-purple)), 6px 6px 0 rgba(0,0,0,0.3)' }}>
+              WILD STREETWEAR • CRAZY COLORS
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl text-parchment/90 mb-10 text-balance hero-text-shadow">
-              Where Ancient Tales Meet Modern Craft
+            <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-balance" style={{ fontFamily: 'Fredoka, sans-serif', color: 'rgba(255, 255, 255, 0.95)' }}>
+              Explosive Fashion That Breaks All The Rules
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/books">
-                <button className="btn-primary text-base px-10 py-4">
-                  Explore Tomes
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link href="/apparel">
+                <button className="btn-primary text-lg px-12 py-5 transform hover:rotate-3">
+                  SHOP CRAZY CLOTHES
                 </button>
               </Link>
-              <Link href="/apparel">
-                <button className="px-10 py-4 rounded-md font-semibold text-parchment border-2 border-primary/40 hover:border-primary hover:bg-primary/10 transition-all backdrop-blur-sm bg-leather-brown/30">
-                  Shop Apparel
+              <Link href="/books">
+                <button className="px-12 py-5 rounded-full font-bold text-white border-4 border-blue hover:border-yellow hover:bg-purple/30 transition-all backdrop-blur-sm bg-card/50 text-lg shadow-glow transform hover:-rotate-2" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                  MEET THE CREATOR
                 </button>
               </Link>
             </div>
@@ -46,114 +59,67 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* Book Collection Section */}
-      <section className="section-padding content-section relative overflow-hidden">
-        {/* Mystical orb effects - candlelight ambiance */}
-        <div className="mystical-orb orb-gold" style={{ width: '450px', height: '450px', top: '-10%', left: '8%', animationDelay: '0s' }} />
-        <div className="mystical-orb orb-burgundy" style={{ width: '380px', height: '380px', bottom: '-5%', right: '12%', animationDelay: '2s' }} />
-
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title font-serif">
-              Literary Collection
-            </h2>
-            <p className="section-subtitle text-pretty">
-              Tales of wonder, mystery, and adventure bound in timeless volumes
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
-            {[
-              { title: 'The Eternal Oath', image: '/generated/book1-eternal-oath.png', price: '$18.99' },
-              { title: 'Shadows of Prophecy', image: '/generated/book2-prophecy.png', price: '$19.99' },
-              { title: 'Chronicles of Aetheria', image: '/generated/book3-aetheria.png', price: '$17.99' },
-              { title: 'Guardians of Zephyr', image: '/generated/book4-zephyr.png', price: '$21.99', badge: 'Coming Soon' }
-            ].map((book, idx) => (
-              <div key={idx} className="card-enhanced group relative">
-                {book.badge && (
-                  <div className="absolute top-3 right-3 bg-secondary text-parchment text-xs px-3 py-1.5 rounded z-10 font-semibold shadow-burgundy uppercase tracking-wide">
-                    {book.badge}
-                  </div>
-                )}
-                <div className="aspect-portrait relative bg-warm-black border-b border-primary/20">
-                  <Image
-                    src={book.image}
-                    alt={book.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
-                  />
-                </div>
-                <div className="p-5 space-y-3 relative z-10">
-                  <h3 className="font-serif font-bold text-parchment text-base lg:text-lg line-clamp-2">
-                    {book.title}
-                  </h3>
-                  <p className="text-gold font-bold text-xl tracking-wide">{book.price}</p>
-                  <button className="w-full mt-3 px-4 py-2.5 rounded bg-burgundy/20 text-primary border border-primary/40 hover:bg-primary hover:text-warm-black transition-all text-sm font-semibold uppercase tracking-wider shadow-gold">
-                    View Tome
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link href="/books">
-              <button className="btn-primary text-base px-10 py-4">
-                Browse Library
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Apparel Section */}
+      {/* Apparel Section - PRIMARY FOCUS */}
       <section className="section-padding content-section bg-card/40 relative overflow-hidden border-y border-primary/10">
-        {/* Mystical orb effects */}
-        <div className="mystical-orb orb-burgundy" style={{ width: '480px', height: '480px', top: '5%', right: '3%', animationDelay: '1s' }} />
-        <div className="mystical-orb orb-purple" style={{ width: '350px', height: '350px', bottom: '8%', left: '4%', animationDelay: '3s' }} />
+        {/* Neon orb effects */}
+        <div className="neon-orb orb-pink" style={{ width: '480px', height: '480px', top: '5%', right: '3%', animationDelay: '1s' }} />
+        <div className="neon-orb orb-purple" style={{ width: '420px', height: '420px', bottom: '8%', left: '4%', animationDelay: '3s' }} />
+        <div className="neon-orb orb-yellow" style={{ width: '350px', height: '350px', top: '50%', left: '50%', animationDelay: '2s' }} />
 
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title font-serif">
-              Enchanted Wardrobe
+            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{ fontFamily: 'Bangers, sans-serif', color: 'hsl(var(--electric-pink))', textShadow: '4px 4px 0 hsl(var(--cyber-yellow)), 8px 8px 0 hsl(var(--neon-purple)), 12px 12px 0 rgba(0,0,0,0.5)' }}>
+              INSANE STREETWEAR!
             </h2>
-            <p className="section-subtitle text-pretty">
-              Garments woven with tales and artistry
+            <p className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'Righteous, sans-serif', color: 'hsl(var(--cyber-yellow))', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 4px 4px 0 rgba(0,0,0,0.3)' }}>
+              Colors That Pop • Designs That Rock
+            </p>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+              Bold, vibrant, and unapologetically wild fashion that makes a statement
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-12">
             {[
-              { title: 'Dragon Mythology Hoodie', design: 'Golden dragon design with mystical patterns', price: '$39.99', color: 'Navy', image: '/generated/apparel-dragon-hoodie.png' },
-              { title: 'Ethereal Glow Hoodie', design: 'Glowing blue ethereal design', price: '$39.99', color: 'Black', image: '/generated/apparel-ethereal-hoodie.png' },
-              { title: 'Author Collection Tee', design: 'Lenny Stengel signature design', price: '$24.99', color: 'Charcoal', image: '/generated/apparel-author-tee.png' }
+              { title: 'NEON EXPLOSION HOODIE', design: 'Electric pink and purple gradient with wild graphics', price: '$49.99', color: 'Multi', image: '/generated/apparel-dragon-hoodie.png' },
+              { title: 'RAINBOW BLAST TEE', design: 'Full spectrum color bomb design', price: '$34.99', color: 'White', image: '/generated/apparel-ethereal-hoodie.png' },
+              { title: 'POP ART CREWNECK', design: 'Comic book style burst with bold colors', price: '$44.99', color: 'Black', image: '/generated/apparel-author-tee.png' },
+              { title: 'CYBER WAVE HOODIE', design: 'Futuristic neon wave pattern', price: '$49.99', color: 'Navy', badge: 'NEW!', image: '/generated/apparel-dragon-hoodie.png' },
+              { title: 'GRAFFITI BOMB JOGGERS', design: 'Street art inspired all-over print', price: '$54.99', color: 'Multi', image: '/generated/apparel-ethereal-hoodie.png' },
+              { title: 'ELECTRIC DREAMS ZIP-UP', design: 'Psychedelic gradient hoodie', price: '$52.99', color: 'Purple/Pink', badge: 'HOT!', image: '/generated/apparel-author-tee.png' }
             ].map((item, idx) => (
-              <div key={idx} className="card-enhanced group">
-                <div className="aspect-square relative bg-warm-black/60 backdrop-blur-sm border border-primary/10 group-hover:border-primary/30 transition-all overflow-hidden">
+              <div key={idx} className="card-enhanced group relative">
+                {item.badge && (
+                  <div className="absolute top-4 right-4 bg-wild-gradient text-white text-sm px-4 py-2 rounded-full z-10 font-bold shadow-glow uppercase tracking-wider transform rotate-12" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                    {item.badge}
+                  </div>
+                )}
+                <div className="aspect-square relative bg-card backdrop-blur-sm overflow-hidden transform transition-transform group-hover:scale-[1.02]">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-95 group-hover:opacity-100"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
                 </div>
                 <div className="p-6 space-y-4 relative z-10">
                   <div>
-                    <h3 className="font-serif font-bold text-parchment text-lg lg:text-xl mb-3 line-clamp-1">
+                    <h3 className="font-bold text-white text-xl lg:text-2xl mb-3 line-clamp-1" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 0 0 20px hsl(var(--electric-pink))' }}>
                       {item.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 italic">
+                    <p className="text-base text-white/80 leading-relaxed line-clamp-2" style={{ fontFamily: 'Fredoka, sans-serif' }}>
                       {item.design}
                     </p>
                   </div>
-                  <div className="flex items-center justify-between pt-3 border-t border-primary/20">
-                    <span className="text-gold font-bold text-2xl tracking-wide">{item.price}</span>
-                    <span className="text-xs text-parchment/80 bg-burgundy/20 px-3 py-1.5 rounded border border-burgundy/30 uppercase tracking-wider font-semibold">
+                  <div className="flex items-center justify-between pt-3 border-t-4 border-pink">
+                    <span className="text-yellow font-black text-3xl tracking-wide" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple))' }}>{item.price}</span>
+                    <span className="text-sm text-white bg-purple px-4 py-2 rounded-full border-2 border-yellow uppercase tracking-wider font-bold shadow-glow" style={{ fontFamily: 'Righteous, sans-serif' }}>
                       {item.color}
                     </span>
                   </div>
-                  <button className="w-full px-4 py-3 rounded bg-primary/15 text-primary border border-primary/40 hover:bg-primary hover:text-warm-black transition-all font-semibold uppercase tracking-wider text-sm shadow-gold">
-                    Add to Collection
+                  <button className="w-full px-6 py-4 rounded-full font-bold uppercase tracking-wider text-base transform transition-all hover:scale-105 hover:rotate-2 bg-rainbow-gradient text-white shadow-glow" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                    GRAB IT NOW!
                   </button>
                 </div>
               </div>
@@ -162,63 +128,67 @@ export default function Homepage() {
 
           <div className="text-center">
             <Link href="/apparel">
-              <button className="btn-primary text-base px-10 py-4">
-                Explore Wardrobe
+              <button className="btn-primary text-xl px-16 py-6 transform hover:rotate-3 hover:scale-110">
+                SEE ALL CRAZY CLOTHES
               </button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* About Lenny Stengal Section */}
+      {/* About Creator - Lenny Stengel */}
       <section className="section-padding content-section relative overflow-hidden">
-        {/* Mystical orb effects */}
-        <div className="mystical-orb orb-gold" style={{ width: '520px', height: '520px', top: '15%', left: '-8%', animationDelay: '0.5s' }} />
-        <div className="mystical-orb orb-burgundy" style={{ width: '400px', height: '400px', bottom: '10%', right: '-3%', animationDelay: '2.5s' }} />
+        {/* Neon orb effects */}
+        <div className="neon-orb orb-blue" style={{ width: '520px', height: '520px', top: '15%', left: '-8%', animationDelay: '0.5s' }} />
+        <div className="neon-orb orb-orange" style={{ width: '450px', height: '450px', bottom: '10%', right: '-3%', animationDelay: '2.5s' }} />
+        <div className="neon-orb orb-green" style={{ width: '380px', height: '380px', top: '40%', right: '10%', animationDelay: '1.8s' }} />
 
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title font-serif">
-              The Chronicler
+            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{ fontFamily: 'Bangers, sans-serif', color: 'hsl(var(--cyber-yellow))', textShadow: '4px 4px 0 hsl(var(--electric-blue)), 8px 8px 0 hsl(var(--neon-purple)), 12px 12px 0 rgba(0,0,0,0.5)' }}>
+              MEET THE CREATOR
             </h2>
+            <p className="text-2xl md:text-3xl font-bold text-pink mb-4" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '2px 2px 0 hsl(var(--electric-blue)), 4px 4px 0 rgba(0,0,0,0.3)' }}>
+              Lenny Stengel • Designer & Author
+            </p>
           </div>
 
           <div className="content-wide">
-            <div className="grid md:grid-cols-5 gap-10 lg:gap-16 items-center">
+            <div className="grid md:grid-cols-5 gap-12 lg:gap-20 items-center">
               <div className="md:col-span-2 flex justify-center">
-                <div className="relative">
-                  <div className="w-64 h-64 lg:w-80 lg:h-80 rounded overflow-hidden shadow-gold bg-gradient-to-br from-primary/20 via-burgundy/15 to-warm-black flex items-center justify-center border-2 border-primary/40 relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50"></div>
-                    <BookOpen className="w-32 h-32 lg:w-40 lg:h-40 text-primary relative z-10 drop-shadow-[0_0_20px_rgba(201,169,97,0.6)]" />
+                <div className="relative transform hover:scale-105 transition-transform">
+                  <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-glow bg-rainbow-gradient p-2 relative transform rotate-3 hover:rotate-6 transition-transform">
+                    <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center border-4 border-yellow relative overflow-hidden">
+                      <div className="absolute inset-0 bg-wild-gradient opacity-30 animate-pulse"></div>
+                      <BookOpen className="w-40 h-40 lg:w-48 lg:h-48 text-pink relative z-10" style={{ filter: 'drop-shadow(0 0 30px hsl(var(--electric-pink)))' }} />
+                    </div>
                   </div>
-                  <div className="absolute -bottom-4 -right-4 bg-secondary text-parchment px-6 py-3 rounded shadow-burgundy font-bold uppercase tracking-wider text-sm border border-primary/30">
-                    3x Published
+                  <div className="absolute -bottom-6 -right-6 bg-rainbow-gradient text-white px-8 py-4 rounded-2xl shadow-glow font-black uppercase tracking-wider text-lg border-4 border-yellow transform -rotate-12" style={{ fontFamily: 'Bangers, sans-serif' }}>
+                    3x PUBLISHED!
                   </div>
                 </div>
               </div>
-              <div className="md:col-span-3 text-center md:text-left space-y-6">
-                <div className="space-y-5">
-                  <p className="text-muted-foreground text-lg leading-relaxed text-pretty">
-                    <span className="text-primary font-serif font-bold text-xl">Lenny Stengal</span> is a celebrated storyteller
-                    whose tales weave through realms of mystery, adventure, and ancient lore. With three published works
-                    and a devoted readership, each narrative explores the depths of character, the weight of choice,
-                    and the timeless dance between shadow and light.
+              <div className="md:col-span-3 text-center md:text-left space-y-8">
+                <div className="space-y-6">
+                  <p className="text-white text-xl md:text-2xl leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+                    <span className="text-pink font-black text-3xl md:text-4xl" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '3px 3px 0 hsl(var(--cyber-yellow)), 6px 6px 0 rgba(0,0,0,0.3)' }}>LENNY STENGEL</span> brings wild creativity to everything—from explosive streetwear designs to published books that push boundaries and break the mold.
                   </p>
-                  <p className="text-muted-foreground text-lg leading-relaxed text-pretty">
-                    Beyond the written word, Lenny&apos;s creative essence flows into distinctive garments—each piece
-                    a wearable fragment of the worlds imagined. These designs bridge the gap between literature and craft,
-                    allowing enthusiasts to carry the magic with them.
+                  <p className="text-white/90 text-lg md:text-xl leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+                    With a passion for bold colors, crazy patterns, and designs that make you look twice, Lenny's clothing line "Inside and Outside the Boxx" is all about expressing yourself loudly and proudly. No rules, no limits—just pure creative energy.
+                  </p>
+                  <p className="text-white/80 text-lg leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+                    Check out the books page to learn more about Lenny's journey, philosophy, and what drives this wild creative vision. It's not just fashion—it's a lifestyle.
                   </p>
                 </div>
-                <div className="pt-4 flex flex-col sm:flex-row gap-4">
-                  <Link href="/about">
-                    <button className="btn-primary px-8 py-3">
-                      Discover More
+                <div className="pt-6 flex flex-col sm:flex-row gap-6">
+                  <Link href="/books">
+                    <button className="btn-primary px-12 py-4 text-lg transform hover:rotate-3">
+                      READ MY STORY
                     </button>
                   </Link>
-                  <Link href="/books">
-                    <button className="px-8 py-3 rounded-md font-semibold text-primary border-2 border-primary/40 hover:bg-primary/10 hover:border-primary transition-all backdrop-blur-sm">
-                      View Collected Works
+                  <Link href="/apparel">
+                    <button className="px-12 py-4 rounded-full font-bold text-white border-4 border-green hover:border-pink hover:bg-blue/30 transition-all backdrop-blur-sm bg-card/60 text-lg shadow-glow transform hover:-rotate-2" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                      SHOP THE COLLECTION
                     </button>
                   </Link>
                 </div>
@@ -229,36 +199,37 @@ export default function Homepage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="section-padding content-section bg-gradient-to-b from-card/40 to-card/70 backdrop-blur-sm relative overflow-hidden border-t border-primary/10">
-        {/* Mystical orb effects */}
-        <div className="mystical-orb orb-gold" style={{ width: '460px', height: '460px', top: '25%', left: '50%', transform: 'translateX(-50%)', animationDelay: '1.5s' }} />
+      <section className="section-padding content-section bg-gradient-to-b from-card/40 to-card/70 backdrop-blur-sm relative overflow-hidden border-t-4 border-pink">
+        {/* Neon orb effects */}
+        <div className="neon-orb orb-pink" style={{ width: '500px', height: '500px', top: '25%', left: '50%', transform: 'translateX(-50%)', animationDelay: '1.5s' }} />
+        <div className="neon-orb orb-purple" style={{ width: '420px', height: '420px', bottom: '10%', right: '10%', animationDelay: '2s' }} />
 
         <div className="container">
           <div className="content-center">
-            <div className="text-center space-y-6">
-              <div className="inline-block p-5 rounded bg-primary/10 mb-4 border border-primary/30 shadow-gold">
-                <BookOpen className="w-14 h-14 text-primary drop-shadow-[0_0_15px_rgba(201,169,97,0.5)]" />
+            <div className="text-center space-y-8">
+              <div className="inline-block p-6 rounded-3xl bg-rainbow-gradient mb-6 shadow-glow transform hover:rotate-6 transition-transform">
+                <BookOpen className="w-20 h-20 text-white" style={{ filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.8))' }} />
               </div>
-              <h2 className="section-title font-serif">
-                The Reader&apos;s Circle
+              <h2 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Bangers, sans-serif', color: 'hsl(var(--electric-pink))', textShadow: '3px 3px 0 hsl(var(--cyber-yellow)), 6px 6px 0 hsl(var(--electric-blue)), 9px 9px 0 rgba(0,0,0,0.4)' }}>
+                JOIN THE CREW!
               </h2>
-              <p className="section-subtitle text-pretty max-w-xl mx-auto">
-                Join our fellowship to receive word of new tales, exclusive glimpses into upcoming works,
-                and announcements of rare garments and limited editions.
+              <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+                Get the inside scoop on new drops, exclusive designs, limited releases, and all the wild stuff coming your way. Be first to know when crazy new gear hits the shop!
               </p>
-              <form className="max-w-lg mx-auto pt-4">
-                <div className="flex flex-col sm:flex-row gap-4">
+              <form className="max-w-2xl mx-auto pt-6">
+                <div className="flex flex-col sm:flex-row gap-6">
                   <input
                     type="email"
-                    placeholder="Your correspondence address..."
-                    className="flex-1 px-6 py-4 bg-warm-black/60 border border-primary/30 text-parchment placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all backdrop-blur-sm rounded"
+                    placeholder="Enter your email..."
+                    className="flex-1 px-8 py-5 bg-card/80 border-4 border-purple text-white placeholder:text-white/50 focus:outline-none focus:border-pink transition-all backdrop-blur-sm rounded-2xl text-lg shadow-glow"
+                    style={{ fontFamily: 'Fredoka, sans-serif' }}
                   />
-                  <button type="submit" className="btn-primary whitespace-nowrap px-8 py-4 text-base">
-                    Join Circle
+                  <button type="submit" className="btn-primary whitespace-nowrap px-12 py-5 text-lg transform hover:rotate-3">
+                    LET'S GO!
                   </button>
                 </div>
-                <p className="text-xs text-muted-foreground mt-5 italic">
-                  Your trust is sacred. Depart the circle at your leisure.
+                <p className="text-sm text-white/70 mt-6" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+                  No spam, just the good stuff. Unsubscribe anytime you want.
                 </p>
               </form>
             </div>

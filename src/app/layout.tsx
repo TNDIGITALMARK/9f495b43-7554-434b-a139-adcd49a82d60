@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Inside and Outside the Boxx - Wild Streetwear & Creative Design",
+  description: "Crazy colorful clothing and bold streetwear designs by Lenny Stengel. Express yourself with wild patterns, neon colors, and explosive fashion that breaks all the rules.",
 };
 
 export default function RootLayout({

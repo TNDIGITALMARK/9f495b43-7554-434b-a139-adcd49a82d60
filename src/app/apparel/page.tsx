@@ -9,75 +9,78 @@ import Footer from '@/components/Footer'
 const apparelItems = [
   {
     id: 1,
-    title: 'Dragon Mythology Hoodie',
-    subtitle: 'Premium Fantasy Collection',
-    design: 'Featuring an intricately detailed golden dragon design inspired by ancient mythology. The dragon\'s scales shimmer with mystical patterns that capture the essence of legendary creatures.',
-    price: '$39.99',
-    colors: ['Navy', 'Black', 'Charcoal'],
-    sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    material: '80% Cotton, 20% Polyester',
-    features: ['Premium heavyweight fabric', 'Double-lined hood', 'Kangaroo pocket', 'Ribbed cuffs and waistband'],
-    image: '/generated/dragon-mythology-hoodie.png'
+    title: 'NEON EXPLOSION HOODIE',
+    subtitle: 'CRAZY COLOR BLAST',
+    design: 'Electric pink and purple gradient with wild lightning graphics. This hoodie screams energy and makes you impossible to miss. Bold patterns, insane colors, and pure chaos in clothing form.',
+    price: '$49.99',
+    colors: ['Multi-Color', 'Electric Pink/Purple', 'Neon Rainbow'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+    material: '85% Premium Cotton, 15% Polyester',
+    features: ['Ultra-soft premium fabric', 'Vibrant all-over print', 'Double-lined hood', 'Oversized fit'],
+    image: '/generated/dragon-mythology-hoodie.png',
+    badge: 'HOT!'
   },
   {
     id: 2,
-    title: 'Ethereal Glow Hoodie',
-    subtitle: 'Limited Edition',
-    design: 'A mesmerizing blue ethereal design that seems to glow from within. Inspired by the mystical energies that flow through the worlds of Lenny\'s novels, this design captures the magic of unseen forces.',
-    price: '$39.99',
-    colors: ['Black', 'Navy', 'Deep Purple'],
-    sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    material: '80% Cotton, 20% Polyester',
-    features: ['Glow-in-the-dark elements', 'Premium heavyweight fabric', 'Double-lined hood', 'Kangaroo pocket'],
+    title: 'RAINBOW BLAST TEE',
+    subtitle: 'FULL SPECTRUM BOMB',
+    design: 'Every color of the rainbow exploding across your chest. This isn\'t just a t-shirt—it\'s a statement. Bold, bright, and unapologetically wild. Wear it loud, wear it proud.',
+    price: '$34.99',
+    colors: ['White', 'Black', 'Neon Pink'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+    material: '100% Premium Cotton',
+    features: ['Vibrant DTG print', 'Super soft fabric', 'Unisex fit', 'Pre-shrunk'],
     image: '/generated/ethereal-glow-hoodie.png'
   },
   {
     id: 3,
-    title: 'Author Collection Tee',
-    subtitle: 'Signature Series',
-    design: 'Classic Lenny Stengel signature design featuring the iconic book and dragon emblem. A must-have for true fans of the Fire and Destiny Saga.',
-    price: '$24.99',
-    colors: ['Charcoal', 'Navy', 'Forest Green', 'Black'],
-    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
-    material: '100% Premium Cotton',
-    features: ['Soft-touch fabric', 'Breathable material', 'Reinforced neckline', 'Pre-shrunk'],
-    image: '/generated/author-collection-tee.png'
+    title: 'POP ART CREWNECK',
+    subtitle: 'COMIC BOOK STYLE',
+    design: 'Comic book style burst graphics with POW! BAM! BOOM! energy. Bold outlines, halftone dots, and colors that jump off the fabric. Pure pop art perfection.',
+    price: '$44.99',
+    colors: ['Black', 'White', 'Navy'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    material: '80% Cotton, 20% Polyester',
+    features: ['Fleece-lined interior', 'Bold screen print', 'Ribbed collar and cuffs', 'Relaxed fit'],
+    image: '/generated/author-collection-tee.png',
+    badge: 'NEW!'
   },
   {
     id: 4,
-    title: 'Eternal Oath Hoodie',
-    subtitle: 'Book Series Collection',
-    design: 'Inspired by the first book in the Fire and Destiny Saga. Features flame and sword imagery symbolizing the eternal oath that binds heroes to their destiny.',
-    price: '$42.99',
-    colors: ['Black', 'Burgundy', 'Navy'],
+    title: 'CYBER WAVE HOODIE',
+    subtitle: 'FUTURISTIC NEON',
+    design: 'Futuristic neon wave patterns that look like they\'re from the year 3000. Glowing blues, electric purples, and cyber pinks create a design that\'s totally out of this world.',
+    price: '$49.99',
+    colors: ['Navy', 'Black', 'Deep Purple'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     material: '85% Cotton, 15% Polyester',
-    features: ['Premium heavyweight fabric', 'Embroidered details', 'Double-lined hood', 'Kangaroo pocket'],
+    features: ['Premium heavyweight fabric', 'Reflective elements', 'Double-lined hood', 'Kangaroo pocket'],
     image: '/generated/eternal-oath-hoodie.png'
   },
   {
     id: 5,
-    title: 'Shadows of Prophecy Tee',
-    subtitle: 'Book Series Collection',
-    design: 'Dark and mysterious design featuring the hooded figure from Book Two. The glowing blue eyes and swirling shadows create an unforgettable statement piece.',
-    price: '$26.99',
-    colors: ['Black', 'Navy', 'Charcoal'],
-    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
-    material: '100% Premium Cotton',
-    features: ['Metallic ink details', 'Soft-touch fabric', 'Reinforced neckline', 'Pre-shrunk'],
+    title: 'GRAFFITI BOMB JOGGERS',
+    subtitle: 'STREET ART VIBES',
+    design: 'Street art inspired all-over print with spray paint effects, bold tags, and urban energy. These joggers are for people who live outside the lines.',
+    price: '$54.99',
+    colors: ['Multi-Color', 'Black/Multi', 'White/Multi'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    material: '90% Cotton, 10% Elastane',
+    features: ['All-over sublimation print', 'Elastic waistband', 'Tapered fit', 'Side pockets'],
     image: '/generated/shadows-prophecy-tee.png'
   },
   {
     id: 6,
-    title: 'Aetheria Warrior Hoodie',
-    subtitle: 'Exclusive Design',
-    design: 'Elegant design featuring the silver-haired warrior from Chronicles of Aetheria. Purple and silver tones create a regal, mystical appearance.',
-    price: '$41.99',
-    colors: ['Deep Purple', 'Silver Gray', 'Black'],
+    title: 'ELECTRIC DREAMS ZIP-UP',
+    subtitle: 'PSYCHEDELIC GRADIENT',
+    design: 'Psychedelic gradient hoodie that shifts between hot pink, electric purple, and neon blue. Like a sunset on another planet. Bold, beautiful, and totally bonkers.',
+    price: '$52.99',
+    colors: ['Purple/Pink Gradient', 'Blue/Green Gradient', 'Orange/Pink Gradient'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
     material: '80% Cotton, 20% Polyester',
-    features: ['Premium heavyweight fabric', 'Soft inner lining', 'Double-lined hood', 'Kangaroo pocket'],
-    image: '/generated/aetheria-warrior-hoodie.png'
+    features: ['Full-zip front', 'All-over gradient print', 'Premium fabric', 'Adjustable hood'],
+    image: '/generated/aetheria-warrior-hoodie.png',
+    badge: 'TRENDING'
   }
 ]
 
@@ -87,49 +90,67 @@ export default function ApparelPage() {
       <Navigation />
 
       {/* Header */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-6">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
+      <section className="py-12 md:py-20 relative overflow-hidden">
+        {/* Neon orb effects */}
+        <div className="neon-orb orb-pink" style={{ width: '600px', height: '600px', top: '-20%', left: '10%', animationDelay: '0s' }} />
+        <div className="neon-orb orb-purple" style={{ width: '500px', height: '500px', top: '-15%', right: '5%', animationDelay: '1.5s' }} />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <Link href="/" className="inline-flex items-center gap-3 text-white/70 hover:text-yellow transition-all mb-8 hover:transform hover:translate-x-2 text-lg font-bold" style={{ fontFamily: 'Righteous, sans-serif' }}>
+            <ArrowLeft className="w-6 h-6" />
+            BACK HOME
           </Link>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">
-            Fantasy Apparel Collection
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '4px 4px 0 hsl(var(--cyber-yellow)), 8px 8px 0 hsl(var(--neon-purple)), 12px 12px 0 rgba(0,0,0,0.5)' }}>
+            <span className="text-pink">CRAZY</span>{' '}
+            <span className="text-yellow">COLORFUL</span>{' '}
+            <span className="text-blue">CLOTHES!</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl">
-            Wear the magic. Each design is crafted to bring the fantastical worlds of Lenny Stengal&apos;s novels to life. Premium quality apparel that tells a story.
+          <p className="text-2xl md:text-3xl font-bold text-purple mb-6 max-w-4xl" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '2px 2px 0 hsl(var(--cyan-yellow)), 4px 4px 0 rgba(0,0,0,0.3)' }}>
+            Explosive Streetwear • Wild Patterns • Insane Colors
+          </p>
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+            Premium quality apparel that makes a statement. Bold designs for people who dare to stand out. This isn't fashion—it's a rebellion against boring clothes.
           </p>
         </div>
       </section>
 
       {/* Apparel Grid */}
-      <section className="py-8 md:py-12 pb-20">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
+      <section className="py-8 md:py-12 pb-20 relative">
+        {/* Neon orb effects */}
+        <div className="neon-orb orb-blue" style={{ width: '450px', height: '450px', top: '20%', left: '-10%', animationDelay: '2s' }} />
+        <div className="neon-orb orb-orange" style={{ width: '520px', height: '520px', bottom: '10%', right: '-8%', animationDelay: '1s' }} />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
             {apparelItems.map((item) => (
-              <div key={item.id} className="bg-card rounded-2xl overflow-hidden shadow-glow">
+              <div key={item.id} className="card-enhanced group relative">
+                {item.badge && (
+                  <div className="absolute top-5 right-5 bg-wild-gradient text-white text-base px-6 py-3 rounded-full z-10 font-black shadow-glow uppercase tracking-wider transform rotate-12 hover:rotate-6 transition-transform" style={{ fontFamily: 'Bangers, sans-serif' }}>
+                    {item.badge}
+                  </div>
+                )}
                 {/* Product Image */}
-                <div className="aspect-square bg-muted relative group overflow-hidden">
+                <div className="aspect-square bg-card relative group overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-300" />
                 </div>
 
                 {/* Product Details */}
-                <div className="p-6 md:p-8">
-                  <div className="mb-4">
-                    <h2 className="text-2xl font-serif font-bold text-white mb-1">
+                <div className="p-6 md:p-8 space-y-5">
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-pink transition-colors" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 0 0 20px hsl(var(--electric-pink))' }}>
                       {item.title}
                     </h2>
-                    <p className="text-sm text-gold font-medium">{item.subtitle}</p>
+                    <p className="text-lg text-yellow font-bold uppercase tracking-wider" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '1px 1px 0 hsl(var(--neon-purple))' }}>{item.subtitle}</p>
                   </div>
 
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  <p className="text-white/90 text-base leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
                     {item.design}
                   </p>
 
