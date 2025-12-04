@@ -32,8 +32,8 @@ export default function CreatorPage() {
             <p className="text-3xl md:text-4xl font-bold text-purple mb-6" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '2px 2px 0 hsl(var(--cyber-yellow)), 4px 4px 0 rgba(0,0,0,0.3)' }}>
               Creator • Designer • Author • Visionary
             </p>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl" style={{ fontFamily: 'Fredoka, sans-serif' }}>
-              The creative force behind "Inside and Outside the Boxx" — where wild imagination meets explosive fashion
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl flex flex-wrap items-center justify-center gap-3" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+              The creative force behind <img src="/boxx-logo.png" alt="Inside and Outside the Boxx" className="inline-block h-16 md:h-20 w-auto" /> — where wild imagination meets explosive fashion
             </p>
           </div>
         </div>
@@ -53,8 +53,8 @@ export default function CreatorPage() {
                 THE STORY
               </h2>
               <div className="space-y-6 text-lg md:text-xl text-white/90 leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
-                <p>
-                  <span className="text-yellow font-black text-2xl" style={{ fontFamily: 'Bangers, sans-serif' }}>Lenny Stengel</span> isn't just a designer—he's a creative explosion. With a mind that refuses to stay inside the lines and a passion for colors that most people are afraid to wear, Lenny created "Inside and Outside the Boxx" as a rebellion against boring, safe fashion.
+                <p className="flex flex-wrap items-center gap-2">
+                  <span className="text-yellow font-black text-2xl" style={{ fontFamily: 'Bangers, sans-serif' }}>Lenny Stengel</span> isn't just a designer—he's a creative explosion. With a mind that refuses to stay inside the lines and a passion for colors that most people are afraid to wear, Lenny created <img src="/boxx-logo.png" alt="Inside and Outside the Boxx" className="inline-block h-12 md:h-14 w-auto mx-1" /> as a rebellion against boring, safe fashion.
                 </p>
                 <p>
                   Growing up, Lenny was always the kid with the wild ideas, the one doodling crazy patterns in notebooks and dreaming up worlds that didn't exist yet. That creative energy never faded—it only got louder, bolder, and more colorful.

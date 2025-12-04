@@ -203,8 +203,8 @@ export default function Homepage() {
                   <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed px-4 md:px-0" style={{ fontFamily: 'Fredoka, sans-serif' }}>
                     <span className="text-pink font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl block mb-2" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '2px 2px 0 hsl(var(--cyber-yellow)), 4px 4px 0 rgba(0,0,0,0.3)' }}>LENNY STENGEL</span> brings wild creativity to everything—from explosive streetwear designs to published books that push boundaries and break the mold.
                   </p>
-                  <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-4 md:px-0" style={{ fontFamily: 'Fredoka, sans-serif' }}>
-                    With a passion for bold colors, crazy patterns, and designs that make you look twice, Lenny's clothing line "Inside and Outside the Boxx" is all about expressing yourself loudly and proudly. No rules, no limits—just pure creative energy.
+                  <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-4 md:px-0 flex flex-wrap items-center justify-center md:justify-start gap-2" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+                    With a passion for bold colors, crazy patterns, and designs that make you look twice, Lenny's clothing line <img src="/boxx-logo.png" alt="Inside and Outside the Boxx" className="inline-block h-12 sm:h-14 md:h-16 w-auto" /> is all about expressing yourself loudly and proudly. No rules, no limits—just pure creative energy.
                   </p>
                   <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed px-4 md:px-0" style={{ fontFamily: 'Fredoka, sans-serif' }}>
                     Check out the books page to learn more about Lenny's journey, philosophy, and what drives this wild creative vision. It's not just fashion—it's a lifestyle.

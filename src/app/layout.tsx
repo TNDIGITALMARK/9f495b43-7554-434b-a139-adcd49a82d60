@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Inside and Outside the Boxx - Wild Streetwear & Creative Design",
+  title: "Inside & Outside 13 the Boxx - Wild Streetwear & Creative Design",
   description: "Crazy colorful clothing and bold streetwear designs by Lenny Stengel. Express yourself with wild patterns, neon colors, and explosive fashion that breaks all the rules.",
 };
 

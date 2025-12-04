@@ -23,7 +23,7 @@ export default function Footer() {
               <BoxxLogo size="sm" animated={false} />
             </div>
             <p className="text-base text-white/90 leading-relaxed mb-6 max-w-md" style={{ fontFamily: 'Fredoka, sans-serif' }}>
-              Wild streetwear, crazy colors, and explosive designs. Breaking all the rules with "Inside and Outside the Boxx"!
+              Wild streetwear, crazy colors, and explosive designs. Breaking all the rules!
             </p>
             <div className="flex items-center gap-3">
               <a
