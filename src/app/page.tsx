@@ -2,56 +2,61 @@ export const dynamic = 'force-dynamic'
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { BookOpen } from 'lucide-react'
+import { BookOpen, Box, Package } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import HeroSlideshow from '@/components/HeroSlideshow'
+import BoxxLogo from '@/components/BoxxLogo'
 
 export default function Homepage() {
   return (
     <div className="min-h-screen bg-waves">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative section-padding-lg overflow-hidden min-h-[80vh] flex items-center">
+      {/* Hero Section - Enhanced with 3D box elements */}
+      <section className="relative section-padding-lg overflow-hidden min-h-[90vh] flex items-center">
         {/* Background Slideshow */}
         <HeroSlideshow />
 
+        {/* 3D Floating Boxes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
+          <Box className="absolute top-20 left-10 w-24 h-24 text-pink/20 animate-magical-float" style={{ animationDelay: '0s', filter: 'drop-shadow(0 0 30px hsl(var(--electric-pink)))' }} />
+          <Package className="absolute top-40 right-20 w-32 h-32 text-purple/20 animate-magical-float" style={{ animationDelay: '1s', filter: 'drop-shadow(0 0 30px hsl(var(--neon-purple)))' }} />
+          <Box className="absolute bottom-32 left-1/4 w-20 h-20 text-yellow/20 animate-magical-float" style={{ animationDelay: '2s', filter: 'drop-shadow(0 0 30px hsl(var(--cyber-yellow)))' }} />
+          <Package className="absolute bottom-20 right-1/3 w-28 h-28 text-blue/20 animate-magical-float" style={{ animationDelay: '0.5s', filter: 'drop-shadow(0 0 30px hsl(var(--electric-blue)))' }} />
+        </div>
+
         <div className="container text-center content-section relative z-30">
-          <div className="max-w-5xl mx-auto space-y-8">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-wider text-balance hero-text-shadow relative" style={{ fontFamily: 'Bangers, sans-serif' }}>
-              <span className="relative inline-block text-pink">
-                INSIDE{' '}
-                <span className="relative inline-block text-yellow">
-                  &{' '}
-                  <span className="relative">
-                    <span className="text-purple">O</span>
-                    <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-orange text-4xl md:text-5xl lg:text-6xl font-black" style={{ zIndex: 10 }}>
-                      13
-                    </span>
-                  </span>
-                  UTSIDE
-                </span>
-              </span>
-              <br />
-              <span className="text-blue">THE</span>{' '}
-              <span className="text-green">BOXX</span>
-            </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl mb-6 font-bold text-balance text-yellow" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '3px 3px 0 hsl(var(--neon-purple)), 6px 6px 0 rgba(0,0,0,0.3)' }}>
-              WILD STREETWEAR • CRAZY COLORS
-            </p>
-            <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-balance" style={{ fontFamily: 'Fredoka, sans-serif', color: 'rgba(255, 255, 255, 0.95)' }}>
+          <div className="max-w-6xl mx-auto space-y-10">
+            {/* Enhanced Logo with extreme 3D effects */}
+            <div className="relative mb-8">
+              <BoxxLogo size="xl" animated={true} className="justify-center flex-wrap" />
+            </div>
+
+            {/* Tagline with enhanced styling */}
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-rainbow-gradient blur-3xl opacity-30 animate-pulse"></div>
+              <p className="relative text-2xl md:text-4xl lg:text-5xl mb-6 font-bold text-balance text-yellow px-8 py-4 bg-card/30 backdrop-blur-sm rounded-3xl border-4 border-yellow/50 shadow-glow" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '4px 4px 0 hsl(var(--neon-purple)), 8px 8px 0 rgba(0,0,0,0.5)' }}>
+                WILD STREETWEAR • CRAZY COLORS • NO LIMITS
+              </p>
+            </div>
+
+            <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-balance px-6" style={{ fontFamily: 'Fredoka, sans-serif', color: 'rgba(255, 255, 255, 0.95)', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Explosive Fashion That Breaks All The Rules
             </p>
+
+            {/* Enhanced CTA buttons with box theme */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/apparel">
-                <button className="btn-primary text-lg px-12 py-5 transform hover:rotate-3">
-                  SHOP CRAZY CLOTHES
+              <Link href="/apparel" className="group">
+                <button className="relative btn-primary text-lg px-14 py-6 transform hover:rotate-3 hover:scale-110 overflow-hidden">
+                  <Box className="absolute top-1 right-2 w-6 h-6 text-white/40 group-hover:rotate-45 transition-transform" />
+                  <span className="relative z-10">SHOP CRAZY CLOTHES</span>
                 </button>
               </Link>
-              <Link href="/books">
-                <button className="px-12 py-5 rounded-full font-bold text-white border-4 border-blue hover:border-yellow hover:bg-purple/30 transition-all backdrop-blur-sm bg-card/50 text-lg shadow-glow transform hover:-rotate-2" style={{ fontFamily: 'Righteous, sans-serif' }}>
-                  MEET THE CREATOR
+              <Link href="/books" className="group">
+                <button className="relative px-14 py-6 rounded-full font-bold text-white border-4 border-blue hover:border-yellow hover:bg-purple/30 transition-all backdrop-blur-sm bg-card/60 text-lg shadow-glow transform hover:-rotate-2 hover:scale-105 overflow-hidden" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                  <Package className="absolute top-1 left-2 w-6 h-6 text-white/40 group-hover:-rotate-45 transition-transform" />
+                  <span className="relative z-10">MEET THE CREATOR</span>
                 </button>
               </Link>
             </div>
@@ -89,12 +94,16 @@ export default function Homepage() {
               { title: 'ELECTRIC DREAMS ZIP-UP', design: 'Psychedelic gradient hoodie', price: '$52.99', color: 'Purple/Pink', badge: 'HOT!', image: '/generated/apparel-author-tee.png' }
             ].map((item, idx) => (
               <div key={idx} className="card-enhanced group relative">
+                {/* Box icon overlay */}
+                <Box className="absolute top-2 left-2 w-8 h-8 text-white/10 group-hover:text-pink/30 transition-colors z-20" />
+
                 {item.badge && (
-                  <div className="absolute top-4 right-4 bg-wild-gradient text-white text-sm px-4 py-2 rounded-full z-10 font-bold shadow-glow uppercase tracking-wider transform rotate-12" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                  <div className="absolute top-4 right-4 bg-wild-gradient text-white text-sm px-4 py-2 rounded-full z-10 font-bold shadow-glow uppercase tracking-wider transform rotate-12 flex items-center gap-1" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                    <Package className="w-4 h-4" />
                     {item.badge}
                   </div>
                 )}
-                <div className="aspect-square relative bg-card backdrop-blur-sm overflow-hidden transform transition-transform group-hover:scale-[1.02]">
+                <div className="aspect-square relative bg-card backdrop-blur-sm overflow-hidden transform transition-transform group-hover:scale-[1.02] border-4 border-transparent group-hover:border-pink/30">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -102,10 +111,16 @@ export default function Homepage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
+                  {/* Box grid pattern overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity" style={{
+                    backgroundImage: 'linear-gradient(0deg, hsl(var(--electric-pink)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--electric-pink)) 1px, transparent 1px)',
+                    backgroundSize: '30px 30px'
+                  }}></div>
                 </div>
-                <div className="p-6 space-y-4 relative z-10">
+                <div className="p-6 space-y-4 relative z-10 bg-gradient-to-b from-transparent to-card/50">
                   <div>
-                    <h3 className="font-bold text-white text-xl lg:text-2xl mb-3 line-clamp-1" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 0 0 20px hsl(var(--electric-pink))' }}>
+                    <h3 className="font-bold text-white text-xl lg:text-2xl mb-3 line-clamp-1 flex items-center gap-2" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 0 0 20px hsl(var(--electric-pink))' }}>
+                      <Package className="w-5 h-5 text-pink" />
                       {item.title}
                     </h3>
                     <p className="text-base text-white/80 leading-relaxed line-clamp-2" style={{ fontFamily: 'Fredoka, sans-serif' }}>
@@ -118,8 +133,9 @@ export default function Homepage() {
                       {item.color}
                     </span>
                   </div>
-                  <button className="w-full px-6 py-4 rounded-full font-bold uppercase tracking-wider text-base transform transition-all hover:scale-105 hover:rotate-2 bg-rainbow-gradient text-white shadow-glow" style={{ fontFamily: 'Righteous, sans-serif' }}>
-                    GRAB IT NOW!
+                  <button className="w-full px-6 py-4 rounded-full font-bold uppercase tracking-wider text-base transform transition-all hover:scale-105 hover:rotate-2 bg-rainbow-gradient text-white shadow-glow flex items-center justify-center gap-2 group/btn" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                    <Box className="w-5 h-5 group-hover/btn:rotate-45 transition-transform" />
+                    <span>GRAB IT NOW!</span>
                   </button>
                 </div>
               </div>
