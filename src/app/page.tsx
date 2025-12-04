@@ -13,50 +13,37 @@ export default function Homepage() {
     <div className="min-h-screen bg-waves">
       <Navigation />
 
-      {/* Hero Section - Enhanced with 3D box elements */}
+      {/* Hero Section - Simplified */}
       <section className="relative section-padding-lg overflow-hidden min-h-[90vh] flex items-center">
         {/* Background Slideshow */}
         <HeroSlideshow />
 
-        {/* 3D Floating Boxes */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
-          <Box className="absolute top-20 left-10 w-24 h-24 text-pink/20 animate-magical-float" style={{ animationDelay: '0s', filter: 'drop-shadow(0 0 30px hsl(var(--electric-pink)))' }} />
-          <Package className="absolute top-40 right-20 w-32 h-32 text-purple/20 animate-magical-float" style={{ animationDelay: '1s', filter: 'drop-shadow(0 0 30px hsl(var(--neon-purple)))' }} />
-          <Box className="absolute bottom-32 left-1/4 w-20 h-20 text-yellow/20 animate-magical-float" style={{ animationDelay: '2s', filter: 'drop-shadow(0 0 30px hsl(var(--cyber-yellow)))' }} />
-          <Package className="absolute bottom-20 right-1/3 w-28 h-28 text-blue/20 animate-magical-float" style={{ animationDelay: '0.5s', filter: 'drop-shadow(0 0 30px hsl(var(--electric-blue)))' }} />
-        </div>
-
         <div className="container text-center content-section relative z-30">
-          <div className="max-w-6xl mx-auto space-y-10">
-            {/* Enhanced Logo with extreme 3D effects */}
-            <div className="relative mb-8">
+          <div className="max-w-6xl mx-auto space-y-8">
+            {/* Logo */}
+            <div className="relative mb-6">
               <BoxxLogo size="xl" animated={true} className="justify-center flex-wrap" />
             </div>
 
-            {/* Tagline with enhanced styling */}
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-rainbow-gradient blur-3xl opacity-30 animate-pulse"></div>
-              <p className="relative text-2xl md:text-4xl lg:text-5xl mb-6 font-bold text-balance text-yellow px-8 py-4 bg-card/30 backdrop-blur-sm rounded-3xl border-4 border-yellow/50 shadow-glow" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '4px 4px 0 hsl(var(--neon-purple)), 8px 8px 0 rgba(0,0,0,0.5)' }}>
-                WILD STREETWEAR • CRAZY COLORS • NO LIMITS
-              </p>
-            </div>
+            {/* Simplified Tagline */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance text-yellow px-4" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '3px 3px 0 hsl(var(--neon-purple)), 6px 6px 0 rgba(0,0,0,0.4)' }}>
+              WILD STREETWEAR • CRAZY COLORS • NO LIMITS
+            </h1>
 
-            <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-balance px-6" style={{ fontFamily: 'Fredoka, sans-serif', color: 'rgba(255, 255, 255, 0.95)', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+            <p className="text-lg md:text-xl lg:text-2xl text-balance px-6" style={{ fontFamily: 'Fredoka, sans-serif', color: 'rgba(255, 255, 255, 0.95)', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Explosive Fashion That Breaks All The Rules
             </p>
 
-            {/* Enhanced CTA buttons with box theme */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/apparel" className="group">
-                <button className="relative btn-primary text-lg px-14 py-6 transform hover:rotate-3 hover:scale-110 overflow-hidden">
-                  <Box className="absolute top-1 right-2 w-6 h-6 text-white/40 group-hover:rotate-45 transition-transform" />
-                  <span className="relative z-10">SHOP CRAZY CLOTHES</span>
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+              <Link href="/apparel">
+                <button className="btn-primary text-lg px-14 py-6 transform hover:scale-105">
+                  SHOP CRAZY CLOTHES
                 </button>
               </Link>
-              <Link href="/books" className="group">
-                <button className="relative px-14 py-6 rounded-full font-bold text-white border-4 border-blue hover:border-yellow hover:bg-purple/30 transition-all backdrop-blur-sm bg-card/60 text-lg shadow-glow transform hover:-rotate-2 hover:scale-105 overflow-hidden" style={{ fontFamily: 'Righteous, sans-serif' }}>
-                  <Package className="absolute top-1 left-2 w-6 h-6 text-white/40 group-hover:-rotate-45 transition-transform" />
-                  <span className="relative z-10">MEET THE CREATOR</span>
+              <Link href="/books">
+                <button className="px-14 py-6 rounded-full font-bold text-white border-4 border-blue hover:border-yellow hover:bg-purple/30 transition-all backdrop-blur-sm bg-card/60 text-lg shadow-glow transform hover:scale-105" style={{ fontFamily: 'Righteous, sans-serif' }}>
+                  MEET THE CREATOR
                 </button>
               </Link>
             </div>

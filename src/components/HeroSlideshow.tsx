@@ -39,25 +39,24 @@ export default function HeroSlideshow() {
               zIndex: currentIndex === index ? 1 : 0,
             }}
           >
-            <Image
-              src={image}
-              alt={`Fantasy background ${index + 1}`}
-              fill
-              priority={index === 0}
-              className="object-cover object-center"
-              quality={90}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={image}
+                alt={`Fantasy background ${index + 1}`}
+                fill
+                priority={index === 0}
+                className="object-cover"
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                quality={90}
+                sizes="100vw"
+              />
+            </div>
           </div>
         ))}
       </div>
 
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background/90 z-10 pointer-events-none" />
-
-      {/* Magical particle overlay effect */}
-      <div className="absolute inset-0 z-20 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-accent/5 animate-pulse" />
-      </div>
 
       {/* Slideshow indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2 pointer-events-auto">
@@ -67,7 +66,7 @@ export default function HeroSlideshow() {
             onClick={() => setCurrentIndex(index)}
             className={`h-1.5 rounded-full transition-all duration-300 ${
               currentIndex === index
-                ? 'w-8 bg-gold'
+                ? 'w-8 bg-yellow'
                 : 'w-1.5 bg-white/30 hover:bg-white/50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
