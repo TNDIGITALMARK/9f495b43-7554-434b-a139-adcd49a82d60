@@ -35,16 +35,16 @@ export default function Homepage() {
             </div>
 
             {/* Tagline - Bold & Impactful */}
-            <h1
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 leading-tight"
+            <h2
+              className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-center mb-6 md:mb-8 leading-tight tracking-wider"
               style={{
                 fontFamily: 'Righteous, sans-serif',
                 color: 'hsl(var(--cyber-yellow))',
-                textShadow: '2px 2px 0 hsl(var(--neon-purple)), 4px 4px 0 rgba(0,0,0,0.4)'
+                textShadow: '1px 1px 0 hsl(var(--neon-purple)), 2px 2px 0 rgba(0,0,0,0.4)'
               }}
             >
               WILD STREETWEAR • CRAZY COLORS • NO LIMITS
-            </h1>
+            </h2>
 
             {/* Subtitle - Clean & Readable */}
             <p
