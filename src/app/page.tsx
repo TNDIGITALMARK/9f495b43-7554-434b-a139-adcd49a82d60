@@ -23,15 +23,7 @@ export default function Homepage() {
           <div className="max-w-5xl mx-auto">
             {/* Logo - Clean & Centered */}
             <div className="flex justify-center mb-8 md:mb-12">
-              <div className="hidden lg:block">
-                <BoxxLogo size="xl" animated={true} />
-              </div>
-              <div className="hidden md:block lg:hidden">
-                <BoxxLogo size="lg" animated={true} />
-              </div>
-              <div className="block md:hidden">
-                <BoxxLogo size="md" animated={true} />
-              </div>
+              <BoxxLogo size="md" animated={true} />
             </div>
 
             {/* Tagline - Bold & Impactful */}
@@ -98,7 +90,7 @@ export default function Homepage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
             {[
               { title: 'NEON EXPLOSION HOODIE', design: 'Electric pink and purple gradient with wild graphics', price: '$49.99', color: 'Multi', image: '/generated/apparel-dragon-hoodie.png' },
               { title: 'RAINBOW BLAST TEE', design: 'Full spectrum color bomb design', price: '$34.99', color: 'White', image: '/generated/apparel-ethereal-hoodie.png' },

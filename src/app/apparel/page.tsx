@@ -121,7 +121,8 @@ export default function ApparelPage() {
         <div className="neon-orb orb-orange" style={{ width: '520px', height: '520px', bottom: '10%', right: '-8%', animationDelay: '1s' }} />
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
+          <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {apparelItems.map((item) => (
               <div key={item.id} className="card-enhanced group relative">
                 {item.badge && (
@@ -130,7 +131,7 @@ export default function ApparelPage() {
                   </div>
                 )}
                 {/* Product Image */}
-                <div className="aspect-square bg-card relative group overflow-hidden">
+                <div className="aspect-square bg-card relative group overflow-hidden max-h-[300px]">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -142,28 +143,28 @@ export default function ApparelPage() {
                 </div>
 
                 {/* Product Details */}
-                <div className="p-6 md:p-8 space-y-5">
+                <div className="p-4 md:p-5 space-y-3">
                   <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-pink transition-colors" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 0 0 20px hsl(var(--electric-pink))' }}>
+                    <h2 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-pink transition-colors" style={{ fontFamily: 'Bangers, sans-serif', textShadow: '2px 2px 0 hsl(var(--neon-purple)), 0 0 20px hsl(var(--electric-pink))' }}>
                       {item.title}
                     </h2>
-                    <p className="text-lg text-yellow font-bold uppercase tracking-wider" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '1px 1px 0 hsl(var(--neon-purple))' }}>{item.subtitle}</p>
+                    <p className="text-sm text-yellow font-bold uppercase tracking-wider" style={{ fontFamily: 'Righteous, sans-serif', textShadow: '1px 1px 0 hsl(var(--neon-purple))' }}>{item.subtitle}</p>
                   </div>
 
-                  <p className="text-white/90 text-base leading-relaxed" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+                  <p className="text-white/90 text-sm leading-relaxed line-clamp-3" style={{ fontFamily: 'Fredoka, sans-serif' }}>
                     {item.design}
                   </p>
 
                   {/* Material & Features */}
-                  <div className="mb-6 space-y-3">
+                  <div className="mb-3 space-y-2">
                     <div>
                       <span className="text-xs text-muted-foreground uppercase tracking-wide">Material</span>
-                      <p className="text-white text-sm">{item.material}</p>
+                      <p className="text-white text-xs">{item.material}</p>
                     </div>
                     <div>
-                      <span className="text-xs text-muted-foreground uppercase tracking-wide block mb-2">Features</span>
-                      <ul className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
-                        {item.features.map((feature, idx) => (
+                      <span className="text-xs text-muted-foreground uppercase tracking-wide block mb-1">Features</span>
+                      <ul className="grid grid-cols-1 gap-1 text-xs text-muted-foreground">
+                        {item.features.slice(0, 2).map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-1">
                             <span className="text-gold mt-0.5">•</span>
                             <span>{feature}</span>
@@ -174,45 +175,47 @@ export default function ApparelPage() {
                   </div>
 
                   {/* Colors */}
-                  <div className="mb-6">
-                    <span className="text-xs text-muted-foreground uppercase tracking-wide block mb-3">Available Colors</span>
-                    <div className="flex flex-wrap gap-2">
-                      {item.colors.map((color, idx) => (
-                        <button
+                  <div className="mb-3">
+                    <span className="text-xs text-muted-foreground uppercase tracking-wide block mb-2">Colors</span>
+                    <div className="flex flex-wrap gap-1">
+                      {item.colors.slice(0, 2).map((color, idx) => (
+                        <span
                           key={idx}
-                          className="px-4 py-2 bg-muted/50 rounded-full text-xs text-white border border-border hover:border-gold hover:text-gold transition-colors"
+                          className="px-2 py-1 bg-muted/50 rounded-full text-xs text-white/70"
                         >
                           {color}
-                        </button>
+                        </span>
                       ))}
                     </div>
                   </div>
 
                   {/* Sizes */}
-                  <div className="mb-6">
-                    <span className="text-xs text-muted-foreground uppercase tracking-wide block mb-3">Sizes</span>
-                    <div className="flex flex-wrap gap-2">
-                      {item.sizes.map((size, idx) => (
-                        <button
+                  <div className="mb-3">
+                    <span className="text-xs text-muted-foreground uppercase tracking-wide block mb-2">Sizes</span>
+                    <div className="flex flex-wrap gap-1">
+                      {item.sizes.slice(0, 4).map((size, idx) => (
+                        <span
                           key={idx}
-                          className="px-4 py-2 bg-muted/50 rounded-lg text-xs text-white border border-border hover:border-gold hover:text-gold transition-colors"
+                          className="px-2 py-1 bg-muted/50 rounded text-xs text-white/70"
                         >
                           {size}
-                        </button>
+                        </span>
                       ))}
+                      {item.sizes.length > 4 && <span className="text-xs text-muted-foreground px-2 py-1">+more</span>}
                     </div>
                   </div>
 
                   {/* Price & Add to Cart */}
-                  <div className="flex items-center justify-between pt-6 border-t border-white/10">
-                    <span className="text-3xl font-bold text-gold">{item.price}</span>
-                    <button className="btn-primary">
+                  <div className="flex items-center justify-between pt-3 border-t border-white/10">
+                    <span className="text-2xl font-bold text-gold">{item.price}</span>
+                    <button className="px-4 py-2 rounded-full font-bold uppercase text-xs bg-rainbow-gradient text-white shadow-glow hover:scale-105 transition-all" style={{ fontFamily: 'Righteous, sans-serif' }}>
                       Add to Cart
                     </button>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </section>

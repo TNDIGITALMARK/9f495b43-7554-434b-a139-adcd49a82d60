@@ -30,7 +30,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Enhanced Logo */}
           <Link href="/" className="group flex items-center">
-            <BoxxLogo size="sm" animated={false} />
+            <BoxxLogo size="xs" animated={false} />
           </Link>
 
           {/* Desktop Navigation - Enhanced with crazy colorful theme */}

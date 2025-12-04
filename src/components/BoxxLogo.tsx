@@ -3,17 +3,18 @@
 import Image from 'next/image'
 
 interface BoxxLogoProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   animated?: boolean
   className?: string
 }
 
 export default function BoxxLogo({ size = 'md', animated = true, className = '' }: BoxxLogoProps) {
   const sizeConfig = {
-    sm: { width: 40, height: 40 },
-    md: { width: 60, height: 60 },
-    lg: { width: 80, height: 80 },
-    xl: { width: 100, height: 100 }
+    xs: { width: 45, height: 45 },
+    sm: { width: 70, height: 70 },
+    md: { width: 120, height: 120 },
+    lg: { width: 160, height: 160 },
+    xl: { width: 200, height: 200 }
   }
 
   const dimensions = sizeConfig[size]
@@ -30,10 +31,11 @@ export default function BoxxLogo({ size = 'md', animated = true, className = '' 
         alt="Inside & Outside 13 The Boxx Logo"
         width={dimensions.width}
         height={dimensions.height}
-        className="w-auto h-auto"
         priority
         style={{
-          filter: 'drop-shadow(0 0 20px rgba(255, 0, 128, 0.4))'
+          filter: 'drop-shadow(0 0 20px rgba(255, 0, 128, 0.4))',
+          width: dimensions.width,
+          height: dimensions.height
         }}
       />
     </div>
