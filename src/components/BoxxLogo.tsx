@@ -15,10 +15,10 @@ export default function BoxxLogo({ size = 'md', animated = true, className = '' 
   }
 
   const innerSizeClasses = {
-    sm: 'text-lg',
-    md: 'text-2xl',
-    lg: 'text-4xl',
-    xl: 'text-6xl'
+    sm: 'text-sm',
+    md: 'text-lg',
+    lg: 'text-2xl',
+    xl: 'text-4xl'
   }
 
   return (
