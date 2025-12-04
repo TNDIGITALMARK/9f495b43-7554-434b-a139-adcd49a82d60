@@ -10,10 +10,10 @@ interface BoxxLogoProps {
 
 export default function BoxxLogo({ size = 'md', animated = true, className = '' }: BoxxLogoProps) {
   const sizeConfig = {
-    sm: { width: 80, height: 80 },
-    md: { width: 160, height: 160 },
-    lg: { width: 240, height: 240 },
-    xl: { width: 300, height: 300 }
+    sm: { width: 40, height: 40 },
+    md: { width: 60, height: 60 },
+    lg: { width: 80, height: 80 },
+    xl: { width: 100, height: 100 }
   }
 
   const dimensions = sizeConfig[size]
