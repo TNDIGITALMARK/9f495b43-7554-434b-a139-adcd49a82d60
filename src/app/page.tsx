@@ -36,11 +36,11 @@ export default function Homepage() {
 
             {/* Tagline - Bold & Impactful */}
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 md:mb-8 leading-tight"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 leading-tight"
               style={{
                 fontFamily: 'Righteous, sans-serif',
                 color: 'hsl(var(--cyber-yellow))',
-                textShadow: '3px 3px 0 hsl(var(--neon-purple)), 6px 6px 0 rgba(0,0,0,0.5)'
+                textShadow: '2px 2px 0 hsl(var(--neon-purple)), 4px 4px 0 rgba(0,0,0,0.4)'
               }}
             >
               WILD STREETWEAR • CRAZY COLORS • NO LIMITS
