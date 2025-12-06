@@ -27,8 +27,8 @@ export default function BoxxLogo({ size = 'md', animated = true, className = '' 
       }}
     >
       <Image
-        src="/logo.png"
-        alt="Inside & Outside 13 The Boxx Logo"
+        src="https://77e93381c682217fcef0325458269ad5.r2.cloudflarestorage.com/phoenix/users/DxnmDi7kzHNtCxrnSWG6FJ4Bplz2/projects/9f495b43-7554-434b-a139-adcd49a82d60/imageContext/279196aa-ebf5-4087-b046-ed0d6c669608.png"
+        alt="Inside & Outside The Boxx Logo"
         width={dimensions.width}
         height={dimensions.height}
         priority
