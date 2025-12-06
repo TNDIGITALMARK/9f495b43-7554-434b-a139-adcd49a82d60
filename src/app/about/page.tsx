@@ -18,7 +18,7 @@ export default function AboutPage() {
             Back to Home
           </Link>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">
-            About Lenny Stengal
+            About Lenny Stengel
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
             3-Time Published Author · Fantasy World Builder · Apparel Designer
@@ -36,7 +36,7 @@ export default function AboutPage() {
                   <BookOpen className="w-32 h-32 text-gold" />
                 </div>
                 <h3 className="text-2xl font-serif font-semibold text-white text-center mb-3">
-                  Lenny Stengal
+                  Lenny Stengel
                 </h3>
                 <p className="text-gold text-center mb-6">Author & Designer</p>
                 <div className="space-y-3">
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="prose prose-invert max-w-none space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Lenny Stengal is an award-winning fantasy author whose imaginative storytelling has captivated readers around the world. With three published novels and a loyal following that spans continents, Lenny&apos;s work explores timeless themes of identity, courage, and the eternal struggle between light and darkness.
+                    Lenny Stengel is an award-winning fantasy author whose imaginative storytelling has captivated readers around the world. With three published novels and a loyal following that spans continents, Lenny&apos;s work explores timeless themes of identity, courage, and the eternal struggle between light and darkness.
                   </p>
                   <p>
                     Growing up fascinated by mythology and epic tales, Lenny spent countless hours creating intricate worlds filled with complex characters and rich histories. This passion eventually transformed into a career that has touched thousands of readers who find themselves lost in the pages of fantastical adventures.
