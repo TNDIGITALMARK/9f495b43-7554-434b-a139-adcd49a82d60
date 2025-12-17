@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const SLIDESHOW_IMAGES = [
-  '/products/morning-duet.jpg',
-  '/products/food-a-palooza.jpg',
-  '/products/cereal-fun.jpg',
-  '/products/snacks-at-the-movies.jpg',
+  '/generated/hero-bg-1.png',
+  '/generated/hero-bg-2.png',
+  '/generated/hero-bg-3.png',
+  '/generated/hero-bg-4.png',
 ]
 
 const TRANSITION_DURATION = 6000 // 6 seconds per image
@@ -42,7 +42,7 @@ export default function HeroSlideshow() {
             <div className="relative w-full h-full">
               <Image
                 src={image}
-                alt={`Cereal apparel design ${index + 1}`}
+                alt={`Hero background ${index + 1}`}
                 fill
                 priority={index === 0}
                 className="object-cover"
