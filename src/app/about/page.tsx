@@ -65,7 +65,7 @@ export default function AboutPage() {
                     Growing up fascinated by mythology and epic tales, Lenny spent countless hours creating intricate worlds filled with complex characters and rich histories. This passion eventually transformed into a career that has touched thousands of readers who find themselves lost in the pages of fantastical adventures.
                   </p>
                   <p>
-                    The Fire and Destiny Saga, Lenny&apos;s flagship series, began with <span className="text-white font-medium">The Eternal Oath</span> in 2022, followed by <span className="text-white font-medium">Shadows of Prophecy</span> in 2023. The highly anticipated conclusion, <span className="text-white font-medium">Guardians of Zephyr</span>, is set to release in Summer 2025. Additionally, the standalone novel <span className="text-white font-medium">Chronicles of Aetheria</span> showcases Lenny&apos;s versatility in crafting self-contained epic adventures.
+                    Lenny&apos;s latest work, <span className="text-white font-medium">Family Ties: An Inheritance Thriller</span>, showcases a brilliant pivot into the suspense genre. This gripping whodunit follows the wealthy Ashford family as they gather for a will reading, only to find themselves trapped with a killer in their midst. With twists that rival Agatha Christie, a detective hiding in plain sight, and a decades-old secret that threatens to destroy them all, <span className="text-white font-medium">Family Ties</span> has earned 5-star reviews for its masterful blend of betrayal, greed, and family drama. Perfect for fans of Lucy Foley and Liane Moriarty.
                   </p>
                 </div>
               </div>
