@@ -92,12 +92,12 @@ export default function Homepage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
             {[
-              { title: 'NEON EXPLOSION HOODIE', design: 'Electric pink and purple gradient with wild graphics', price: '$49.99', color: 'Multi', image: '/generated/apparel-dragon-hoodie.png' },
-              { title: 'RAINBOW BLAST TEE', design: 'Full spectrum color bomb design', price: '$34.99', color: 'White', image: '/generated/apparel-ethereal-hoodie.png' },
-              { title: 'POP ART CREWNECK', design: 'Comic book style burst with bold colors', price: '$44.99', color: 'Black', image: '/generated/apparel-author-tee.png' },
-              { title: 'CYBER WAVE HOODIE', design: 'Futuristic neon wave pattern', price: '$49.99', color: 'Navy', badge: 'NEW!', image: '/generated/apparel-dragon-hoodie.png' },
-              { title: 'GRAFFITI BOMB JOGGERS', design: 'Street art inspired all-over print', price: '$54.99', color: 'Multi', image: '/generated/apparel-ethereal-hoodie.png' },
-              { title: 'ELECTRIC DREAMS ZIP-UP', design: 'Psychedelic gradient hoodie', price: '$52.99', color: 'Purple/Pink', badge: 'HOT!', image: '/generated/apparel-author-tee.png' }
+              { title: 'MORNING DUET', design: 'Two cereal mascots dancing on a vibrant rainbow stage', price: '$27.99', color: 'Black', image: '/products/morning-duet.jpg', badge: 'POPULAR!' },
+              { title: 'FOOD-A-PALOOZA', design: 'Epic food festival with cereal characters performing on stage', price: '$41.99', color: 'Black', image: '/products/food-a-palooza.jpg', badge: 'HOT!' },
+              { title: 'CEREAL FUN', design: 'Characters diving in a giant rainbow bowl of cereal', price: '$24.99', color: 'Black', image: '/products/cereal-fun.jpg', badge: 'BEST VALUE' },
+              { title: 'SNACKS AT THE MOVIES', design: 'Movie theater scene with cereal mascots and rainbow screen', price: '$41.99', color: 'Navy', badge: 'NEW!', image: '/products/snacks-at-the-movies.jpg' },
+              { title: 'BREAKFAST BOOGIE', design: 'Disco dance floor with sparkling lights and 70s vibes', price: '$27.99', color: 'Gray', image: '/products/breakfast-boogie.jpg' },
+              { title: 'COOL CATS', design: 'Beach vibes with cereal mascot in rainbow-striped cup', price: '$27.99', color: 'Black', badge: 'CHILL', image: '/products/cool-cats.jpg' }
             ].map((item, idx) => (
               <div key={idx} className="card-enhanced group relative">
                 {/* Box icon overlay */}
